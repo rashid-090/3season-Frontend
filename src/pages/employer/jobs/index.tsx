@@ -148,7 +148,6 @@ function ManageJobs() {
                   <TableCell>Job Title</TableCell>
                   {/* <TableCell>Company Name</TableCell> */}
                   <TableCell>Date</TableCell>
-                  <TableCell>Action</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -164,12 +163,7 @@ function ManageJobs() {
                       <TableCell>{job.title}</TableCell>
                       {/* <TableCell>{job.company}</TableCell> */}
                       <TableCell>{job.closeDate}</TableCell>
-                      <TableCell>
-                        <span className="flex gap-3 items-center h-10 w-full">
-                          <MdEditSquare className="cursor-pointer hover:text-red-500" />
-                          <RiDeleteBin6Fill className="cursor-pointer hover:text-red-500" />
-                        </span>
-                      </TableCell>
+                  
                     </TableRow>
                   );
                 })}

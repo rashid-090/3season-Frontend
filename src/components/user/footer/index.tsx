@@ -35,20 +35,21 @@ function Footer() {
             <div className="h-[2px] -mt-2 w-20 bg-white"></div>
             <div className="flex flex-col gap-2 font-light text-sm mb-4">
               <p>1309 Coffeen Avenue STE 1200, USA,<br/> Sheridan, Wyoming 82801</p>
-              <a href="Careers@threeseasonsglobal.com" target="_blank" className="hover:text-primaryclr duration-200">Careers@threeseasonsglobal.com</a>
+              <a href="mailto:careers@threeseasonsglobal.com" target="_blank" className="hover:text-primaryclr duration-200">Careers@threeseasonsglobal.com</a>
+              <a href="mailto:recruitments@threeseasonsglobal.com" target="_blank" className="hover:text-primaryclr duration-200">Recruitments@threeseasonsglobal.com</a>
             </div>
             <div className="flex gap-3 items-center">
               <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
                 <a href="https://www.linkedin.com/company/three-seasons-llc/" target="_blank" aria-label="Linkedin"><FaLinkedinIn className="" /></a>
               </div>
               <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
-                <a href="#" target="_blank" aria-label="Facebook"><FaFacebook className="" /></a>
+                <a href="https://www.facebook.com/Threeseasonsjobsabroad" target="_blank" aria-label="Facebook"><FaFacebook className="" /></a>
               </div>
               <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
                 <a href="#" target="_blank" aria-label="Twitter"><FaTwitter className="" /></a>
               </div>
               <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
-                <a href="#" target="_blank" aria-label="Whatsapp"><FaWhatsapp className="" /></a>
+                <a href="https://api.whatsapp.com/send?phone=919846353801" target="_blank" aria-label="Whatsapp"><FaWhatsapp className="" /></a>
               </div>
             </div>
           </div>
