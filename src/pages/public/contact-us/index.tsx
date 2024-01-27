@@ -50,10 +50,10 @@ function Contactus() {
               </span> */}
               <span className='flex gap-5 text-xl lg:text-2xl mt-5'>
                   <a href="https://www.linkedin.com/company/three-seasons-llc/" className='hover:-translate-y-1 duration-200' target='_blank'><FaLinkedin/></a>
-                  <a href="#" className='hover:-translate-y-1 duration-200' target='_blank'><FaFacebook/></a>
-                  <a href="#" className='hover:-translate-y-1 duration-200' target='_blank'><FaTwitter/></a>
-                  <a href="#" className='hover:-translate-y-1 duration-200' target='_blank'><FaInstagram/></a>
-                  <a href="#" className='hover:-translate-y-1 duration-200' target='_blank'><FaWhatsapp/></a>
+                  <a href="https://www.facebook.com/Threeseasonsjobsabroad" className='hover:-translate-y-1 duration-200' target='_blank'><FaFacebook/></a>
+                  <a href="https://api.whatsapp.com/send?phone=919846353801" className='hover:-translate-y-1 duration-200' target='_blank'><FaWhatsapp/></a>
+                  {/* <a href="#" className='hover:-translate-y-1 duration-200' target='_blank'><FaTwitter/></a>
+                  <a href="#" className='hover:-translate-y-1 duration-200' target='_blank'><FaInstagram/></a> */}
               </span>
             </div>
           </div>

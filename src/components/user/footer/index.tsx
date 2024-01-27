@@ -45,9 +45,9 @@ function Footer() {
               <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
                 <a href="https://www.facebook.com/Threeseasonsjobsabroad" target="_blank" aria-label="Facebook"><FaFacebook className="" /></a>
               </div>
-              <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
+              {/* <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
                 <a href="#" target="_blank" aria-label="Twitter"><FaTwitter className="" /></a>
-              </div>
+              </div> */}
               <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
                 <a href="https://api.whatsapp.com/send?phone=919846353801" target="_blank" aria-label="Whatsapp"><FaWhatsapp className="" /></a>
               </div>
