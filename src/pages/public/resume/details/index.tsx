@@ -32,6 +32,9 @@ function Resumedetails() {
     }, 500); // Delay of 1 second (1000 milliseconds)
   };
   const { resume } = useResume();
+  
+
+  
   return (
     <>
       <div className="w-11/12 lg:w-10/12 py-10 mx-auto flex flex-col gap-5">
@@ -43,7 +46,7 @@ function Resumedetails() {
               alt="logo"
             />
             <div className="flex flex-col justify-center">
-              <h4 className="font-semibold text-lg">{resume?.name}</h4>
+              <h4 className="font-semibold text-lg">{resume?.fullName}</h4>
               <p className="text-xs font-semibold text-gray-700">
                 {resume?.designation}
               </p>
@@ -72,8 +75,8 @@ function Resumedetails() {
             <div className="flex gap-3 items-center text-sm font-bold">
               <RiShieldUserFill className="text-xl" />
               <div className="flex flex-col gap-1">
-                <p className="capitalize text-gray-500">Age</p>
-                <p className="">18 - 28 years</p>
+                <p className="capitalize text-gray-500">DOB</p>
+                <p className="">{resume?.dob}</p>
               </div>
             </div>
             <div className="flex gap-3 items-center text-sm font-bold">
@@ -110,39 +113,22 @@ function Resumedetails() {
           </span>
           <div className="p-2 mt-2">
             <div className="flex flex-col gap-5">
-              <div className="flex items-start gap-2">
+            {resume?.educations?.map((data:any, i:any)=>(
+              <>
+              <div className="flex items-start gap-2" key={i}>
                 <TbPointFilled className="text-xl" />
                 <span className="flex flex-col">
-                  <h4 className="text-sm font-semibold capitalize text-gray-600">
-                    disploma in fine arts
+                  <h4 className="text-base font-semibold capitalize text-gray-600">
+                  {data?.degree} 
                   </h4>
+                  <p className="text-sm">{data?.institution} </p>
                   <p className="text-xs font-medium tracking-wider text-gray-500">
-                    2008 - 2011
+                    {data?.startdate} - {data?.enddate}
                   </p>
                 </span>
               </div>
-              <div className="flex items-start gap-2">
-                <TbPointFilled className="text-xl" />
-                <span className="flex flex-col">
-                  <h4 className="text-sm font-semibold capitalize text-gray-600">
-                    Belmont University Bachelor’s Degree in Computer Science
-                  </h4>
-                  <p className="text-xs font-medium tracking-wider text-gray-500">
-                    2008 - 2011
-                  </p>
-                </span>
-              </div>
-              <div className="flex items-start gap-2">
-                <TbPointFilled className="text-xl" />
-                <span className="flex flex-col">
-                  <h4 className="text-sm font-semibold capitalize text-gray-600">
-                    Belmont University Master Degree in Computer Science
-                  </h4>
-                  <p className="text-xs font-medium tracking-wider text-gray-500">
-                    2008 - 2011
-                  </p>
-                </span>
-              </div>
+              </>
+            ))}
             </div>
           </div>
         </div>
@@ -157,39 +143,22 @@ function Resumedetails() {
           </span>
           <div className="p-2 mt-2">
             <div className="flex flex-col gap-5">
-              <div className="flex items-start gap-2">
+            {resume?.experience?.map((data:any, i:any)=>(
+              <>
+              <div className="flex items-start gap-2" key={i}>
                 <TbPointFilled className="text-xl" />
                 <span className="flex flex-col">
-                  <h4 className="text-sm font-semibold capitalize text-gray-600">
-                    San Francisc Senior Python Developer
+                  <h4 className="text-base font-semibold capitalize text-gray-600">
+                  {data?.position} 
                   </h4>
+                  <p className="text-sm">{data?.company} </p>
                   <p className="text-xs font-medium tracking-wider text-gray-500">
-                    2008 - 2011
+                    {data?.startdate} - {data?.enddate}
                   </p>
                 </span>
               </div>
-              <div className="flex items-start gap-2">
-                <TbPointFilled className="text-xl" />
-                <span className="flex flex-col">
-                  <h4 className="text-sm font-semibold capitalize text-gray-600">
-                    Houston Python Developer
-                  </h4>
-                  <p className="text-xs font-medium tracking-wider text-gray-500">
-                    2008 - 2011
-                  </p>
-                </span>
-              </div>
-              <div className="flex items-start gap-2">
-                <TbPointFilled className="text-xl" />
-                <span className="flex flex-col">
-                  <h4 className="text-sm font-semibold capitalize text-gray-600">
-                    Angeloues Junior Python
-                  </h4>
-                  <p className="text-xs font-medium tracking-wider text-gray-500">
-                    2008 - 2011
-                  </p>
-                </span>
-              </div>
+              </>
+            ))}
             </div>
           </div>
         </div>
@@ -203,30 +172,17 @@ function Resumedetails() {
           </span>
           <div className="p-2 mt-2">
             <div className="flex flex-col gap-5">
-              <div className="flex items-start gap-2">
+            {resume?.skills?.map((data:any, i:any)=>(
+              <>
+                <div className="flex items-start gap-2">
                 <TbPointFilled className="text-xl" />
                 <p className="text-sm font-semibold capitalize text-gray-600">
-                  skill
+                  {data}
                 </p>
               </div>
-              <div className="flex items-start gap-2">
-                <TbPointFilled className="text-xl" />
-                <p className="text-sm font-semibold capitalize text-gray-600">
-                  skill
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <TbPointFilled className="text-xl" />
-                <p className="text-sm font-semibold capitalize text-gray-600">
-                  skill
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <TbPointFilled className="text-xl" />
-                <p className="text-sm font-semibold capitalize text-gray-600">
-                  skill
-                </p>
-              </div>
+              </>
+            ))}
+              
             </div>
           </div>
         </div>

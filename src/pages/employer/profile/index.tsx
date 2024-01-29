@@ -82,7 +82,7 @@ const Index = () => {
                 <ReactQuill
                   className="pt-1"
                   theme="snow"
-                  value={value}
+                  value={values?.description}
                   onChange={setValue}
                 />
               </span>

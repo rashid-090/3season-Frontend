@@ -269,7 +269,7 @@ function EmployeeProfile() {
               <ReactQuill
                 className="pt-1"
                 theme="snow"
-                value={value}
+                value={values?.description}
                 onChange={setValue}
               />
             </div>
@@ -400,7 +400,7 @@ function EmployeeProfile() {
                     <input
                       className="border-2 border-gray-200 px-3 py-2 font-normal text-gray-500 text-sm w-full"
                       type="text"
-                      placeholder="Employer"
+                      placeholder="Company name"
                       value={experince.company}
                       onChange={(e) =>
                         handleFieldChange(

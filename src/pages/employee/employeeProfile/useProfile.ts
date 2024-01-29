@@ -45,7 +45,7 @@ const LoginSchema = Yup.object().shape({
   Esalary: Yup.string().trim().required("Esalary is Required"),
   language: Yup.string().trim().required("language is Required"),
   address: Yup.string().trim().required("address is Required"),
-  //   description: Yup.string().trim().required("description is Required"),
+    description: Yup.string().trim().required("description is Required"),
 });
 
 const useRegistrationState = () => {

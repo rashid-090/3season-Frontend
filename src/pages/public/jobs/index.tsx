@@ -246,26 +246,24 @@ function Jobs() {
                       alt="logo"
                     />
                   </div>
-                  <div className="flex flex-col gap-y-5 md:flex-row items-center w-full md:w-[80%]  p-3 text-gray-700">
+                  <div className="flex flex-col gap-y-5 md:flex-row md:justify-between items-center w-full md:w-[80%]  p-3 text-gray-700">
                     <div className="flex gap-1 flex-col lg:pr-32 lg:py-2">
                       <h1 className="text-lg font-semibold tracking-wide capitalize">
-                        {data.jobtitle}
+                        {data.title}
                       </h1>
-                      <span className=" flex items-center gap-1 text-xs font-bold tracking-wide">
-                        <p>{new Date(data.createdAt).toLocaleDateString()}</p>/
+                      <span className=" flex items-center gap-3 text-xs font-bold tracking-wide">
+                        <p>{new Date(data.createdAt).toLocaleDateString()}</p>-
                         <p>{new Date(data.closeDate).toLocaleDateString()}</p>
                       </span>
-                      <span className="flex items-center gap-3">
+                      <span className="flex flex-col md:flex-row items-center gap-3 md:gap-5">
                         <p className="text-xs font-bold capitalize">
-                          {data.title}
+                          Location : {data.location}
                         </p>
                         <p className="text-xs font-bold capitalize">
-                          {data.jobType}
+                        Job type : {data.jobType}
                         </p>
                       </span>
-                      <p className="text-xs font-bold capitalize">
-                        Location : {data.location}
-                      </p>
+           
                       <p
                         className="text-xs lg:text-sm"
                         dangerouslySetInnerHTML={{

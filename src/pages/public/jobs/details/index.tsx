@@ -68,18 +68,17 @@ notify();
                 alt="logo"
               />
               <div>
-                <h4 className="font-semibold">company Name</h4>
+                <h4 className="font-semibold">{jobs?.companyName}</h4>
                 <span className="flex items-center gap-2 pt-2 pb-1 text-xs font-semibold">
                   <SlCalender />
                   <p>
-                    Post Date: {new Date(jobs?.createdAt).toLocaleDateString()}
+                    Post Date : {new Date(jobs?.createdAt).toLocaleDateString()}
                   </p>
                 </span>
                 <span className="flex items-center gap-2 text-xs font-semibold">
                   <SlCalender />
                   <p>
-                    Apply Before:{" "}
-                    {new Date(jobs?.closeDate).toLocaleDateString()}
+                    Apply Before : {new Date(jobs?.closeDate).toLocaleDateString()}
                   </p>
                 </span>
               </div>
@@ -107,7 +106,7 @@ notify();
                 dangerouslySetInnerHTML={{ __html: jobs?.description }}
               />
 
-              <h3 className="text-base font-medium tracking-wide uppercase">
+              {/* <h3 className="text-base font-medium tracking-wide uppercase">
                 Job Requirements
               </h3>
               <div>
@@ -153,7 +152,7 @@ notify();
                     </p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
             <div className="flex flex-col gap-3">
               <h3 className="text-base font-medium tracking-wide uppercase">
@@ -162,32 +161,28 @@ notify();
               <div>
                 <ul className="text-sm flex  flex-col gap-1 text-gray-700 capitalize">
                   <li>
-                    <span className="font-bold text-gray-600">Location</span>:
-                    {jobs?.location}
+                    <span className="font-bold text-gray-600">Location</span> : {jobs?.location}
                   </li>
                   <li>
-                    <span className="font-bold text-gray-600">Salary</span>:
-                    {jobs?.salaryOffer}
+                    <span className="font-bold text-gray-600">Salary</span> : {jobs?.salaryOffer}
                   </li>
                   <li>
-                    <span className="font-bold text-gray-600">job type</span>:
-                    {jobs?.jobType}
+                    <span className="font-bold text-gray-600">job type</span> : {jobs?.jobType}
                   </li>
                   <li>
                     <span className="font-bold text-gray-600">
-                      Total Years Experience
+                      Total Years Experience 
                     </span>
                     : {jobs?.experience}
                   </li>
                   <li>
-                    <span className="font-bold text-gray-600">Gender</span>:
-                    {jobs?.gender}
+                    <span className="font-bold text-gray-600">Gender</span> : {jobs?.gender}
                   </li>
-                  <li>
+                  <li className="flex gap-1">
                     <span className="font-bold text-gray-600">
                       Qualifications
                     </span>
-                    : {jobs?.qualification[0].label}
+                    : {jobs?.qualification?.map((data:any,i:any)=>(<p>{data?.label},</p>))}
                   </li>
                 </ul>
               </div>
