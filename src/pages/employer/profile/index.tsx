@@ -23,9 +23,9 @@ const Index = () => {
           <div className="flex flex-col gap-y-5 md:gap-y-3 md:flex-row md:items-center justify-between">
             <div className="flex flex-col gap2">
               <h1 className="text-base md:text-xl font-semibold uppercase tracking-widest">
-                Company name
+                {values?.companyName}
               </h1>
-              <p className="text-sm font-semibold capitalize">Employer name</p>
+              <p className="text-sm font-semibold capitalize"> {values?.fullName}</p>
             </div>
             <div className="flex gap-5 items-center">
               <img

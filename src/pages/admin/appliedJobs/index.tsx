@@ -140,7 +140,7 @@ function EmployeeData() {
                         <TableCell>
                           <Checkbox checked={isItemSelected} />
                         </TableCell>
-                        <TableCell>{employee?.userId?.name}</TableCell>
+                        <TableCell>{employee?.userId?.fullName}</TableCell>
                         <TableCell>{employee?.itemId?.title}</TableCell>
                         <TableCell>
                           <NavLink

@@ -44,7 +44,7 @@ function EmployeeProfile() {
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-y-3 md:flex-row items-start md:items-center lg:items-start justify-between">
             <h1 className="text-base md:text-xl font-semibold uppercase tracking-widest">
-              Welcome John Devid
+              Welcome {values?.fullName}
             </h1>
             <div className="flex gap-5 items-center">
               <img
@@ -264,7 +264,7 @@ function EmployeeProfile() {
             {/*  */}
             <div className="md:col-span-3 ">
               <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
-                Description / More Details
+                About You Details
               </label>
               <ReactQuill
                 className="pt-1"

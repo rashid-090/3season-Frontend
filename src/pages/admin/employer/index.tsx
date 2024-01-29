@@ -96,7 +96,7 @@ function EmployerData() {
                       <TableCell>
                         <Checkbox checked={isItemSelected} />
                       </TableCell>
-                      <TableCell>{employee.name}</TableCell>
+                      <TableCell>{employee.fullName}</TableCell>
                       <TableCell>{employee.companyName}</TableCell>
                       <TableCell>{employee.email}</TableCell>
                       <TableCell>

@@ -33,7 +33,9 @@ function Resumedetails() {
   };
   const { resume } = useResume();
   
-
+  function createMarkup() {
+    return {__html: resume?.description};
+  }
   
   return (
     <>
@@ -60,9 +62,7 @@ function Resumedetails() {
         {/*  */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-x-10">
           <div>
-            <p className="text-sm text-justify text-gray-600">
-              {resume?.description}
-            </p>
+            <p className="text-sm text-justify text-gray-600" dangerouslySetInnerHTML={createMarkup()}></p>
           </div>
           <div className="grid text-gray-700 grid-cols-2  lg:grid-cols-3  gap-5">
             <div className="flex gap-3 items-center text-sm font-bold">
