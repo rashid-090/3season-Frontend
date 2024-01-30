@@ -241,7 +241,7 @@ function Jobs() {
                 >
                   <div className="w-full md:w-[20%]  p-3 flex items-center justify-center">
                     <img
-                      className="h-full md:h-24 object-cover w-full"
+                      className="object-cover w-20 h-20"
                       src={compyLogo}
                       alt="logo"
                     />

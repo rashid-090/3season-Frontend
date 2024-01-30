@@ -7,7 +7,7 @@ import banpc1 from './images/home/3sea1.webp';
 import banpc2 from './images/home/3sea2.webp';
 import callbackbg from './images/callback/baan2.webp';
 import callbackbg2 from './images/callback/baan3.webp';
-import compyLogo from './images/logos/3seacompany.svg';
+import compyLogo from './images/logos/company-100.png';
 import JobsearchPic from './images/jobsearch.webp';
 import ResumebgPic from './images/resumebg.webp';
 import Loginpic from './images/3login.webp';

@@ -113,14 +113,7 @@ const Header: React.FC<HeaderProps> = () => {
               alt="Threeseason"
             />
           </NavLink>
-          <div className="mr-16 block lg:hidden">
-            <li
-              onClick={() => navigate("/employer/employer-profile")}
-              className="button-30 "
-            >
-              Post a Job
-            </li>
-          </div>
+
           <div className="hidden lg:block">
             <ul className="flex gap-8 font-RedHatDisplaySemibold items-center">
               {menuItems?.map((menu: any, index: any) => (
@@ -244,7 +237,7 @@ const Header: React.FC<HeaderProps> = () => {
               {menuItems?.map((menu: any, index: any) => (
                 <li
                   onClick={() => setOpen(false)}
-                  className="border-b-[1px] w-fit border-gray-200 px-7 py-3 "
+                  className=" w-fit  px-7 py-3 hover:text-primaryclr"
                   key={index}
                 >
                   <NavLink to={menu.url}>{menu.title}</NavLink>
@@ -254,7 +247,62 @@ const Header: React.FC<HeaderProps> = () => {
                 className="flex items-center gap-2 px-7 py-3 relative"
                 ref={menuRef}
               >
-                <li
+                {isAuthenticated ? 
+                (
+                  <div className="flex gap-5 items-center">
+                        <li
+                        onClick={() => navigate("/auth/employer-registration")}
+                        className="cursor-pointer hover:text-primaryclr"
+                      >
+                        Profile
+                      </li>
+                        <li
+                        onClick={() =>signout()}
+                        className="cursor-pointer hover:text-primaryclr"
+                      >
+                        Logout
+                      </li>
+                  </div>
+                )
+                 : 
+                (
+                  <div className="flex gap-5 items-center">
+                        <li
+                       onClick={() => navigate("/auth/login")}
+                        className="cursor-pointer hover:text-primaryclr"
+                      >
+                        Login
+                      </li>
+                      <li
+                    onClick={toggleOptions}
+                    className="cursor-pointer flex items-center gap-1 hover:text-primaryclr duration-150"
+                  >
+                    <span>Register</span> <IoKeyOutline />
+                  </li>
+                  <div
+                    className={`bg-white border shadow-md absolute top-8 left-20 duration-200 transition-opacity origin-top ${
+                      drop ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <ul className="flex flex-col gap-2 py-5 px-6">
+                      <li
+                        onClick={() => navigate("/auth/employer-registration")}
+                        className="cursor-pointer flex gap-2 items-center hover:text-primaryclr duration-150"
+                      >
+                        <span>Employer</span> <FaUser />
+                      </li>
+                      <li
+                        onClick={() => navigate("/auth/employee-registration")}
+                        className="cursor-pointer flex gap-2 items-center hover:text-primaryclr duration-150"
+                      >
+                        <span>Employee</span> <FaUserTie />
+                      </li>
+                    </ul>
+                  </div>
+                  </div>
+                ) 
+                }
+                {/* <li
                   onClick={() => navigate("/auth/login")}
                   className="cursor-pointer"
                 >
@@ -283,7 +331,7 @@ const Header: React.FC<HeaderProps> = () => {
                       <span>Employee</span> <FaUserTie />
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </span>
             </ul>
           </div>

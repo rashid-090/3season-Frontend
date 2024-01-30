@@ -13,6 +13,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { compyLogo } from "../../../../assets";
 import useJobDetails from "./useJobDetails";
 import { useAppSelector } from "../../../../store/hooks";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { Navigate, useNavigate } from "react-router-dom";
 import { AUTH } from "../../../../routes/routes";
 import service from "../../../../utils/service";
@@ -24,6 +25,10 @@ let notify = () =>
     theme: "dark",
     position: "bottom-right",
   });
+
+  const handleGoBack = () => {
+    window.history.back();
+  };
 
 function Jobsdetails() {
   const { user, isAuthenticated } = useAppSelector((state: any) => state.user);
@@ -57,13 +62,16 @@ notify();
     <>
       <div>
         <div className="w-11/12 lg:w-10/12 py-10 mx-auto flex flex-col gap-5">
+        <button onClick={handleGoBack} className="flex items-center gap-2">
+            <IoArrowBackCircleSharp className="text-5xl text-gray-300 hover:text-gray-400 duration-200" />
+          </button>
           <h1 className="text-2xl md:text-3xl font-bold tracking-wider uppercase pb-5 text-black">
             {jobs?.title}
           </h1>
           <div className="flex justify-between flex-col md:flex-row gap-y-5">
-            <div className="flex flex-col md:flex-row gap-5 capitalize">
+            <div className="flex flex-col md:flex-row md:items-center gap-5 capitalize">
               <img
-                className="h-full md:h-28 object-cover"
+                className="h-20 w-20 object-cover"
                 src={compyLogo}
                 alt="logo"
               />
