@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, {useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import {Contactbg} from '../../../assets';
 import { SlLocationPin } from "react-icons/sl";
@@ -8,20 +8,44 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram , FaWhatsapp } from "rea
 import Footer from '../../../components/user/footer';
 import { toast } from 'react-toastify';
 
+// emailjs.sendForm('service_ek0w2so', 'template_anbds0b', form.current, 'falGGqCnuD4ZMOnFI')
 
 function Contactus() {
-  const form = useRef();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_ek0w2so', 'template_anbds0b', form.current, 'falGGqCnuD4ZMOnFI')
-      .then((result) => {
-          toast.success("Message send")
-      }, (error) => {
-          toast.error("Try Again..")
+    // Your EmailJS service ID, template ID, and Public Key
+    const serviceId = 'service_ek0w2so';
+    const templateId = 'template_anbds0b';
+    const publicKey = 'falGGqCnuD4ZMOnFI';
+
+    // Create a new object that contains dynamic template params
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+      user_subject: subject,
+      message: message,
+    };
+
+    // Send the email using EmailJS
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        toast.success("The form was successfully submitted",response)
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      })
+      .catch((error) => {
+        toast.error("Error sending email",error)
       });
-    }
+  }
+
   return (
     <>
     <section className="w-full overflow-hidden">
@@ -33,12 +57,12 @@ function Contactus() {
       <div className='relative shadow-md w-11/12 lg:w-9/12 mx-auto grid grid-cols-1 md:grid-cols-5 bg-white  mb-20 -mt-20 lg:-mt-32 z-20'>
           <div className='md:col-span-3 p-5 lg:p-10 flex flex-col gap-5'>
             <h1 className='text-xl font-RedHatDisplayMedium'>Send Message</h1>
-            <form ref={form} onSubmit={sendEmail} className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Your name' name='user_name' />
-                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Email address' name='user_email' />
-                <input className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' name='user_subject'/>
-                <textarea rows={5} className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' name='message' />
-                <button className='bg-primaryclr hover:bg-sky-600 duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm' type='submit' value="Send">Send</button>
+            <form onSubmit={handleSubmit} className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Your name' name='user_name' value={name} onChange={(e) => setName(e.target.value)}/>
+                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="email" placeholder='Email address' name='user_email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' name='user_subject' value={subject} onChange={(e) => setSubject(e.target.value)}/>
+                <textarea rows={5} className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' name='message' value={message} onChange={(e) => setMessage(e.target.value)}/>
+                <button className='bg-primaryclr hover:bg-sky-600 duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm' type='submit'>Send</button>
             </form>
           </div>
           <div className='md:col-span-2 bg-primaryclr p-5 lg:p-10 text-white'>
