@@ -6,6 +6,7 @@ import { IoIosMail } from "react-icons/io";
 import { BsTelephone } from "react-icons/bs";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram , FaWhatsapp } from "react-icons/fa";
 import Footer from '../../../components/user/footer';
+import { toast } from 'react-toastify';
 
 
 function Contactus() {
@@ -16,9 +17,9 @@ function Contactus() {
 
     emailjs.sendForm('service_ek0w2so', 'template_anbds0b', form.current, 'falGGqCnuD4ZMOnFI')
       .then((result) => {
-          console.log(result.text);
+          toast.success("Message send")
       }, (error) => {
-          console.log(error.text);
+          toast.error("Try Again..")
       });
     }
   return (
@@ -34,10 +35,10 @@ function Contactus() {
             <h1 className='text-xl font-RedHatDisplayMedium'>Send Message</h1>
             <form ref={form} onSubmit={sendEmail} className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                 <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Your name' name='user_name' />
-                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Email address' />
-                <input className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' />
+                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Email address' name='user_email' />
+                <input className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' name='user_subject'/>
                 <textarea rows={5} className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' name='message' />
-                <button className='bg-primaryclr hover:bg-sky-600 duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm' value="Send">Send</button>
+                <button className='bg-primaryclr hover:bg-sky-600 duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm' type='submit' value="Send">Send</button>
             </form>
           </div>
           <div className='md:col-span-2 bg-primaryclr p-5 lg:p-10 text-white'>
