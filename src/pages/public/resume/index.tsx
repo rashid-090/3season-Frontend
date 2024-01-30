@@ -194,7 +194,7 @@ function Resume() {
                   <div className="w-full md:w-[30%] lg:w-[15%]  p-3 flex items-center">
                     <img
                       className="h-28 w-28 md:w-20 md:h-20 mx-auto lg:w-full  lg:h-full object-cover rounded-full hover:grayscale duration-300 cursor-pointer"
-                      src={ProfileLogo}
+                      src={data?.image || ProfileLogo}
                       alt="logo"
                     />
                   </div>

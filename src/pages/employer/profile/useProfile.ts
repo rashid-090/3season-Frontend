@@ -19,6 +19,7 @@ interface ValuesType {
   description: string;
   address: string;
   webUrl: string;
+  image:any
 }
 
 const LoginSchema = Yup.object().shape({
@@ -42,6 +43,8 @@ const useRegistrationState = () => {
     setFieldValue,
     setErrors,
     setValues,
+    setFieldTouched,
+    // setFieldValue
   } = useFormik({
     initialValues: {
       fullName: "",
@@ -49,6 +52,7 @@ const useRegistrationState = () => {
       description: "",
       address: "",
       webUrl: "",
+      image:""
     },
     // validationSchema: LoginSchema,
     onSubmit: debouncedSubmit,
@@ -86,6 +90,7 @@ const useRegistrationState = () => {
       address: data?.data?.address,
       description: data?.data?.description,
       webUrl: data?.data?.webUrl,
+      image:data?.data?.image
     });
   };
 
@@ -103,6 +108,8 @@ const useRegistrationState = () => {
     handleChange,
     value,
     setValue,
+    setFieldTouched,
+    setFieldValue
   };
 };
 

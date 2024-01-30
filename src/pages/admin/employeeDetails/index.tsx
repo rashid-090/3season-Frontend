@@ -34,7 +34,7 @@ function EmployeeDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 gap-x-16">
             <img
               className="h-32 lg:h-40 w-32 lg:w-40 rounded-full hover:saturate-150 duration-200 cursor-pointer"
-              src={ProfileLogo}
+              src={employeeData?.image || ProfileLogo}
               alt="profile logo"
             />
             <div className="md:col-span-3 flex flex-col gap-2 justify-center">

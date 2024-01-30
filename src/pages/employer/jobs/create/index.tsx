@@ -122,7 +122,7 @@ function PostJobs() {
                     required
                     className="border-2 border-gray-200 px-3 py-2 font-normal text-sm"
                     type="text"
-                    placeholder="10k - 20k"
+                    placeholder="10k"
                     name="salaryOffer"
                   value={values?.salaryOffer}
                   onChange={handleChange}

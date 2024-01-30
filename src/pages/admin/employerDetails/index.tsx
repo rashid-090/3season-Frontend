@@ -11,6 +11,10 @@ let compLogo =
 
 function EmployerDetail() {
   const { employerData } = useEmployer();
+
+  function createMarkup() {
+    return {__html: employerData?.description};
+  }
   return (
     <>
       <section className="min-h-screen w-full bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 overflow-hidden">
@@ -45,8 +49,8 @@ function EmployerDetail() {
               
             </div>
             <img
-              className="h-28 w-fit object-cover"
-              src={compLogo}
+              className="h-28 w-28 object-cover"
+              src={employerData?.image}
               alt="logo"
               loading="lazy"
             />
@@ -55,7 +59,7 @@ function EmployerDetail() {
             <h3 className="text-2xl font-semibold">Address</h3>
             <p className="text-sm">{employerData?.address}</p>
             <h3 className="text-2xl font-semibold">More Details</h3>
-            <p className="text-sm">{employerData?.description}</p>
+            <p className="text-sm" dangerouslySetInnerHTML={createMarkup()}></p>
             
           </div>
         </div>

@@ -44,7 +44,7 @@ function Resumedetails() {
           <div className="flex flex-col md:flex-row gap-5 capitalize">
             <img
               className="h-28 w-28 md:h-28 object-cover rounded-full"
-              src={ProfileLogo}
+              src={resume?.image || ProfileLogo}
               alt="logo"
             />
             <div className="flex flex-col justify-center">

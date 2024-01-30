@@ -97,6 +97,8 @@ const useRegistrationState = () => {
     { value: "Accounting", label: "Accounting" },
     { value: "Banking", label: "Banking" },
     { value: "Digital Marketing", label: "Digital Marketing" },
+    { value: "IT", label: "IT" },
+    { value: "Others", label: "Others" },
   ];
   const jobtypeoptions = [
     { value: "Full Time", label: "Full Time" },

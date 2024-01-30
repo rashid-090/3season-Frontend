@@ -11,6 +11,7 @@ import { MdDeleteForever } from "react-icons/md";
 import useProfile from "./useProfile";
 import service from "../../../utils/service";
 import API from "../../../config/api";
+import { toast } from "react-toastify";
 
 const catgoptions = [
   { value: "Accounting", label: "Accounting" },
@@ -39,21 +40,22 @@ function EmployeeProfile() {
     handleRemoveFields,
     handleFieldChange,
     setFieldTouched,
-    setFieldValue
-
+    setFieldValue,
   } = useProfile();
 
-
-  const handleUpload = async () =>{
+  const handleUpload = async () => {
     console.log(values.image);
-    let formdata = new FormData()
-    typeof values.image === "object" &&
-      formdata.append("image", values.image);
-    const data = await service.post(API.UPDATE_PROFILE_IMAGE,formdata)
-    
-    console.log(data);
-    
-  }
+    let formdata = new FormData();
+    typeof values.image === "object" && formdata.append("image", values.image);
+    const data = await service.post(API.UPDATE_PROFILE_IMAGE, formdata);
+    // toast.s
+    if (data?.data?.statusCode == 200) {
+      toast?.success("success");
+    } else {
+      toast?.error("error");
+    }
+    console.log(data?.data?.statusCode);
+  };
   return (
     <>
       <div className="lg:col-span-3">
@@ -65,25 +67,29 @@ function EmployeeProfile() {
             <div className="flex gap-5 items-center">
               <img
                 className="h-16 w-16 md:h-20 md:w-20 rounded-full object-cover cursor-pointer"
-                src={ProfileLogo}
+                src={values?.image || ProfileLogo}
                 alt="profile"
               />
               <div className="flex flex-col gap-1">
                 <div className="flex flex-col gap-y-1 md:flex-row md:justify-between">
-                  <input type="file"
-                          name="image"
-                          onChange={(e) => {
-                            setFieldTouched("image", true);
-                            if (
-                              e?.target?.files &&
-                              e?.target?.files?.length > 0
-                            ) {
-                              setFieldValue("image", e.target.files[0]);
-                            }
-                          }}
-                          className="file:hover:bg-primaryclr file:bg-slate-200 file:duration-200 file:border-none file:hover:text-white file:px-2 file:py-1 file:rounded-2xl file:cursor-pointer duration-200 h-fit w-fit text-xs capitalize font-medium tracking-wider flex gap-2 items-center"
+                  <input
+                    type="file"
+                    name="image"
+                    onChange={(e) => {
+                      setFieldTouched("image", true);
+                      if (e?.target?.files && e?.target?.files?.length > 0) {
+                        setFieldValue("image", e.target.files[0]);
+                      }
+                    }}
+                    className="file:hover:bg-primaryclr file:bg-slate-200 file:duration-200 file:border-none file:hover:text-white file:px-2 file:py-1 file:rounded-2xl file:cursor-pointer duration-200 h-fit w-fit text-xs capitalize font-medium tracking-wider flex gap-2 items-center"
                   />
-                  <button onClick={()=>handleUpload()} className="bg-primaryclr hover:bg-sky-700 w-fit rounded-full px-3 text-white text-sm" type="button">upload</button>
+                  <button
+                    onClick={() => handleUpload()}
+                    className="bg-primaryclr hover:bg-sky-700 w-fit rounded-full px-3 text-white text-sm"
+                    type="button"
+                  >
+                    upload
+                  </button>
                 </div>
                 <p className="text-sm font-semibold capitalize tracking-wide">
                   Profile image
@@ -175,7 +181,7 @@ function EmployeeProfile() {
             </span>
 
             {/*  */}
-            <span className="flex flex-col gap-1 w-full lg:col-span-2">
+            {/* <span className="flex flex-col gap-1 w-full lg:col-span-2">
               <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
                 Categories
               </label>
@@ -188,7 +194,7 @@ function EmployeeProfile() {
                 isSearchable={true}
                 placeholder="Select Categories"
               />
-            </span>
+            </span> */}
 
             {/*  */}
             <span className="flex flex-col gap-1 w-full">
@@ -240,7 +246,7 @@ function EmployeeProfile() {
               <input
                 className="border-2 border-gray-200 px-3 py-2 font-normal text-gray-500 text-sm"
                 type="text"
-                placeholder="10k - 15k"
+                placeholder="10k"
                 name="Csalary"
                 value={values?.Csalary}
                 onChange={handleChange}
@@ -254,14 +260,14 @@ function EmployeeProfile() {
               <input
                 className="border-2 border-gray-200 px-3 py-2 font-normal text-gray-500 text-sm"
                 type="text"
-                placeholder="20k - 30k"
+                placeholder="20k"
                 name="Esalary"
                 value={values?.Esalary}
                 onChange={handleChange}
               />
             </span>
             {/*  */}
-            <span className="flex flex-col gap-1 w-full">
+            <span className="flex flex-col gap-1 w-full lg:col-span-3">
               <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
                 Languages
               </label>
@@ -297,7 +303,7 @@ function EmployeeProfile() {
               <ReactQuill
                 className="pt-1"
                 theme="snow"
-                value={values?.description}
+                value={value || values?.description}
                 onChange={setValue}
               />
             </div>
