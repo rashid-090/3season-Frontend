@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import {Contactbg} from '../../../assets';
 import { SlLocationPin } from "react-icons/sl";
 import { IoIosMail } from "react-icons/io";
@@ -8,6 +9,18 @@ import Footer from '../../../components/user/footer';
 
 
 function Contactus() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ek0w2so', 'template_anbds0b', form.current, 'falGGqCnuD4ZMOnFI')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    }
   return (
     <>
     <section className="w-full overflow-hidden">
@@ -19,12 +32,12 @@ function Contactus() {
       <div className='relative shadow-md w-11/12 lg:w-9/12 mx-auto grid grid-cols-1 md:grid-cols-5 bg-white  mb-20 -mt-20 lg:-mt-32 z-20'>
           <div className='md:col-span-3 p-5 lg:p-10 flex flex-col gap-5'>
             <h1 className='text-xl font-RedHatDisplayMedium'>Send Message</h1>
-            <form className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Your name' />
+            <form ref={form} onSubmit={sendEmail} className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Your name' name='user_name' />
                 <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Email address' />
                 <input className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' />
-                <textarea rows={5} className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' />
-                <button className='bg-primaryclr hover:bg-sky-600 duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm'>Send</button>
+                <textarea rows={5} className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' name='message' />
+                <button className='bg-primaryclr hover:bg-sky-600 duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm' value="Send">Send</button>
             </form>
           </div>
           <div className='md:col-span-2 bg-primaryclr p-5 lg:p-10 text-white'>

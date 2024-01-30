@@ -130,7 +130,7 @@ enum API {
   // Public routes
   LIST_PUBLIC_JOB="/public/job?search=",
   LIST_PUBLIC_JOB_DETAILS="/public/job/:id",
-
+  UPDATE_PROFILE_IMAGE = "/account/profile",
 }
 
 const publicEndpoints = [

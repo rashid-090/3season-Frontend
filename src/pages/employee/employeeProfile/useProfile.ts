@@ -28,7 +28,8 @@ interface ValuesType {
   language: string;
   address: string;
   description: string;
-  workExperince:string
+  workExperince:string,
+  image:any
 }
 
 const LoginSchema = Yup.object().shape({
@@ -130,6 +131,7 @@ const useRegistrationState = () => {
     handleBlur,
     handleChange,
     setFieldValue,
+    setFieldTouched,
     setErrors,
     setValues
   } = useFormik({
@@ -148,7 +150,8 @@ const useRegistrationState = () => {
       language: "",
       address: "",
       description: "",
-      workExperince:""
+      workExperince:"",
+      image:""
     },
     // validationSchema: LoginSchema,
     onSubmit: debouncedSubmit,
@@ -198,7 +201,8 @@ const useRegistrationState = () => {
       language: data?.data?.language,
       address: data?.data?.address,
       description: data?.data?.description,
-      workExperince:data?.data?.workExperince
+      workExperince:data?.data?.workExperince,
+      image:data?.data?.image
       });
   };
 
@@ -226,6 +230,8 @@ const useRegistrationState = () => {
     handleAddFields,
     handleRemoveFields,
     handleFieldChange,
+    setFieldTouched,
+    setFieldValue
   };
 };
 

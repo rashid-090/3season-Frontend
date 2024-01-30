@@ -31,7 +31,7 @@ const Jobsdetails = lazy(() => import("../pages/public/jobs/details"));
 const EmployerResumes = lazy(() => import("../pages/public/resume"));
 const EmployerResumesDetails = lazy(() => import("../pages/public/resume/details"));
 const AboutUs = lazy(() => import("../pages/public/aboutUs/AboutUs"));
-const ContactUs = lazy(() => import("../pages/public/contact-us"));
+const ContactUs = lazy(() => import("../pages/public/contact-us/index"));
 
 // Employer components
 const EmployerProfile = lazy(() => import("../pages/employer/profile"));

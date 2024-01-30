@@ -9,6 +9,8 @@ import { FaFolderOpen } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 import { MdDeleteForever } from "react-icons/md";
 import useProfile from "./useProfile";
+import service from "../../../utils/service";
+import API from "../../../config/api";
 
 const catgoptions = [
   { value: "Accounting", label: "Accounting" },
@@ -36,8 +38,22 @@ function EmployeeProfile() {
     handleAddFields,
     handleRemoveFields,
     handleFieldChange,
+    setFieldTouched,
+    setFieldValue
+
   } = useProfile();
 
+
+  const handleUpload = async () =>{
+    console.log(values.image);
+    let formdata = new FormData()
+    typeof values.image === "object" &&
+      formdata.append("image", values.image);
+    const data = await service.post(API.UPDATE_PROFILE_IMAGE,formdata)
+    
+    console.log(data);
+    
+  }
   return (
     <>
       <div className="lg:col-span-3">
@@ -53,10 +69,22 @@ function EmployeeProfile() {
                 alt="profile"
               />
               <div className="flex flex-col gap-1">
-                <input
-                  type="file"
-                  className="file:hover:bg-primaryclr file:bg-slate-200 file:duration-200 file:border-none file:hover:text-white file:px-2 file:py-1 file:rounded-2xl file:cursor-pointer duration-200 h-fit w-fit text-xs capitalize font-medium tracking-wider flex gap-2 items-center"
-                />
+                <div className="flex flex-col gap-y-1 md:flex-row md:justify-between">
+                  <input type="file"
+                          name="image"
+                          onChange={(e) => {
+                            setFieldTouched("image", true);
+                            if (
+                              e?.target?.files &&
+                              e?.target?.files?.length > 0
+                            ) {
+                              setFieldValue("image", e.target.files[0]);
+                            }
+                          }}
+                          className="file:hover:bg-primaryclr file:bg-slate-200 file:duration-200 file:border-none file:hover:text-white file:px-2 file:py-1 file:rounded-2xl file:cursor-pointer duration-200 h-fit w-fit text-xs capitalize font-medium tracking-wider flex gap-2 items-center"
+                  />
+                  <button onClick={()=>handleUpload()} className="bg-primaryclr hover:bg-sky-700 w-fit rounded-full px-3 text-white text-sm" type="button">upload</button>
+                </div>
                 <p className="text-sm font-semibold capitalize tracking-wide">
                   Profile image
                 </p>
