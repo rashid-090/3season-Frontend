@@ -41,11 +41,11 @@ function Jobs() {
   return (
     <ThemeProvider theme={theme}>
       <section
-        className=" bg-search-bg bg-cover w-full h-full bg-bottom text-black py-24"
+        className=" bg-search-bg bg-cover w-full h-full bg-bottom text-black py-10 lg:py-20"
         style={{ height: "40%" }}
       >
         <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100">
-          <form className="grid grid-cols-1 md:grid-cols-5 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 shadow-md">
+          <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 shadow-md">
             <div className="w-full relative md:col-span-2">
               <input
                 className="w-full p-[.33rem] caret-primaryclr pl-6 text-gray-700"
@@ -79,9 +79,9 @@ function Jobs() {
               />
               <IoLocationOutline className="absolute top-3 left-1 text-gray-400" />
             </div>
-            <button className="bg-primaryclr hover:bg-secondaryclr duration-200 uppercase text-white w-20% h-fit px-5 lg:px-10 p-[.4rem] shadow-md rounded-sm">
+            {/* <button className="bg-primaryclr hover:bg-secondaryclr duration-200 uppercase text-white w-20% h-fit px-5 lg:px-10 p-[.4rem] shadow-md rounded-sm">
               Find Job
-            </button>
+            </button> */}
           </form>
         </div>
       </section>
@@ -121,7 +121,7 @@ function Jobs() {
                 <IoIosSearch className="absolute top-3 left-1.5 text-gray-400" />
               </div>
               {/*  */}
-              <div className="w-full relative">
+              {/* <div className="w-full relative">
                 <Select
                   className="w-full text-sm"
                   value={selectedOption}
@@ -130,34 +130,34 @@ function Jobs() {
                   isSearchable={true}
                   placeholder="Search Categories"
                 />
-              </div>
+              </div> */}
               {/*  */}
 
               <div>
                 <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
                   job type
                 </h4>
-                <div>
+                <div className="flex flex-col gap-1">
                   <span className="flex gap-2 items-center">
-                    <Checkbox defaultChecked style={{ padding: 0 }} />
+                    <input type="checkbox"  checked />
                     <label className="text-xs font-medium capitalize">
                       All
                     </label>
                   </span>
                   <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
+                    <input type="checkbox" />
                     <label className="text-xs font-medium capitalize">
                       full time
                     </label>
                   </span>
                   <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
+                    <input type="checkbox" />
                     <label className="text-xs font-medium capitalize">
                       part time
                     </label>
                   </span>
                   <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
+                    <input type="checkbox" />
                     <label className="text-xs font-medium capitalize">
                       freelance
                     </label>
@@ -169,33 +169,33 @@ function Jobs() {
                 <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
                   Experience Level
                 </h4>
-                <div>
+                <div className="flex flex-col gap-1">
                   <span className="flex gap-2 items-center">
-                    <Checkbox defaultChecked style={{ padding: 0 }} />
+                    <input type="checkbox"  checked />
                     <label className="text-xs font-medium capitalize">
                       All
                     </label>
                   </span>
                   <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
+                      <input type="checkbox" />
                     <label className="text-xs font-medium capitalize">
                       Internship
                     </label>
                   </span>
                   <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
+                      <input type="checkbox" />
                     <label className="text-xs font-medium capitalize">
                       Intermediate
                     </label>
                   </span>
                   <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
+                      <input type="checkbox" />
                     <label className="text-xs font-medium capitalize">
                       Mid-level
                     </label>
                   </span>
                   <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
+                      <input type="checkbox" />
                     <label className="text-xs font-medium capitalize">
                       Senior or executive-level
                     </label>
@@ -203,36 +203,15 @@ function Jobs() {
                 </div>
               </div>
               {/*  */}
-              <div>
-                <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
-                  gender
-                </h4>
-                <div>
-                  <span className="flex gap-2 items-center">
-                    <Checkbox defaultChecked style={{ padding: 0 }} />
-                    <label className="text-xs font-medium capitalize">
-                      All
-                    </label>
-                  </span>
-                  <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
-                    <label className="text-xs font-medium capitalize">
-                      male
-                    </label>
-                  </span>
-                  <span className="flex gap-2 items-center">
-                    <Checkbox style={{ padding: 0 }} />
-                    <label className="text-xs font-medium capitalize">
-                      female
-                    </label>
-                  </span>
-                </div>
-              </div>
             </form>
           </div>
           {/* jobs body */}
           <div className="p-3 flex flex-col gap-3 lg:col-span-3 bg-[#f5f5f5] h-fit w-full">
-            {jobs?.map((data: any, i: any) => {
+           
+            {jobs ? 
+            (
+              <>
+              {jobs?.map((data: any, i: any) => {
               const truncatedDescription = data.description?.slice(0, 150);
               return (
                 <div
@@ -283,6 +262,14 @@ function Jobs() {
                 </div>
               );
             })}
+              </>
+            ) :
+            (
+              <>
+              <p>No jobs posted yet</p>
+              </>
+            )
+          }
           </div>
         </div>
       </section>
