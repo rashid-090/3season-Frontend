@@ -58,6 +58,9 @@ notify();
       navigate(AUTH.BASE_PATH);
     }
   };
+
+  let loadingText = 'Loading...'
+
   return (
     <>
       <div>
@@ -66,7 +69,7 @@ notify();
             <IoArrowBackCircleSharp className="text-5xl text-gray-300 hover:text-gray-400 duration-200" />
           </button>
           <h1 className="text-2xl md:text-3xl font-bold tracking-wider uppercase pb-5 text-black">
-            {jobs?.title}
+            {jobs?.title || loadingText}
           </h1>
           <div className="flex justify-between flex-col md:flex-row gap-y-5">
             <div className="flex flex-col md:flex-row md:items-center gap-5 capitalize">
@@ -80,13 +83,13 @@ notify();
                 <span className="flex items-center gap-2 pt-2 pb-1 text-xs font-semibold">
                   <SlCalender />
                   <p>
-                    Post Date : {new Date(jobs?.createdAt).toLocaleDateString()}
+                    Post Date : {new Date(jobs?.createdAt).toLocaleDateString() || loadingText}
                   </p>
                 </span>
                 <span className="flex items-center gap-2 text-xs font-semibold">
                   <SlCalender />
                   <p>
-                    Apply Before : {new Date(jobs?.closeDate).toLocaleDateString()}
+                    Apply Before : {new Date(jobs?.closeDate).toLocaleDateString() || loadingText}
                   </p>
                 </span>
               </div>
@@ -95,7 +98,7 @@ notify();
               {/* Apply button */}
               <button
                 onClick={() => handleClick(id)}
-                className="mt-5 border border-primaryclr py-2 px-5 w-fit flex items-center gap-2 text-black hover:bg-primaryclr hover:text-white duration-300 uppercase text-xs font-bold group"
+                className={`mt-5 border border-primaryclr py-2 px-5 w-fit flex items-center gap-2 text-black hover:bg-primaryclr hover:text-white duration-300 uppercase text-xs font-bold group`}
               >
                 {loading ? "Loading..." : clicked ? "Applyed" : "Apply"}
                 <IoArrowForwardCircleOutline className="group-hover:translate-x-1 duration-300 text-lg" />
@@ -111,7 +114,7 @@ notify();
               </h3>
               <p
                 className="text-sm text-justify text-gray-500"
-                dangerouslySetInnerHTML={{ __html: jobs?.description }}
+                dangerouslySetInnerHTML={{ __html: jobs?.description || loadingText }}
               />
 
               {/* <h3 className="text-base font-medium tracking-wide uppercase">
@@ -169,13 +172,13 @@ notify();
               <div>
                 <ul className="text-sm flex  flex-col gap-1 text-gray-700 capitalize">
                   <li>
-                    <span className="font-bold text-gray-600">Location</span> : {jobs?.location}
+                    <span className="font-bold text-gray-600">Location</span> : {jobs?.location || loadingText}
                   </li>
                   <li>
-                    <span className="font-bold text-gray-600">Salary</span> : {jobs?.salaryOffer}
+                    <span className="font-bold text-gray-600">Salary</span> : {jobs?.salaryOffer || loadingText}
                   </li>
                   <li>
-                    <span className="font-bold text-gray-600">job type</span> : {jobs?.jobType}
+                    <span className="font-bold text-gray-600">job type</span> : {jobs?.jobType || loadingText}
                   </li>
                   <li>
                     <span className="font-bold text-gray-600">
@@ -184,7 +187,7 @@ notify();
                     : {jobs?.experience}
                   </li>
                   <li>
-                    <span className="font-bold text-gray-600">Gender</span> : {jobs?.gender}
+                    <span className="font-bold text-gray-600">Gender</span> : {jobs?.gender || loadingText}
                   </li>
                   <li className="flex gap-1">
                     <span className="font-bold text-gray-600">

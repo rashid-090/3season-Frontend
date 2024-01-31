@@ -37,6 +37,8 @@ function Resumedetails() {
     return {__html: resume?.description};
   }
   
+  let loadingText = 'Loading...'
+
   return (
     <>
       <div className="w-11/12 lg:w-10/12 py-10 mx-auto flex flex-col gap-5">
@@ -48,9 +50,9 @@ function Resumedetails() {
               alt="logo"
             />
             <div className="flex flex-col justify-center">
-              <h4 className="font-semibold text-lg">{resume?.fullName}</h4>
+              <h4 className="font-semibold text-lg">{resume?.fullName || loadingText}</h4>
               <p className="text-xs font-semibold text-gray-700">
-                {resume?.designation}
+                {resume?.designation || loadingText}
               </p>
             </div>
           </div>
@@ -69,35 +71,35 @@ function Resumedetails() {
               <GiBackwardTime className="text-xl" />
               <div className="flex flex-col gap-1">
                 <p className="capitalize text-gray-500">Experince</p>
-                <p className="">{resume?.workExperince} years</p>
+                <p className="">{resume?.workExperince || loadingText} years</p>
               </div>
             </div>
             <div className="flex gap-3 items-center text-sm font-bold">
               <RiShieldUserFill className="text-xl" />
               <div className="flex flex-col gap-1">
                 <p className="capitalize text-gray-500">DOB</p>
-                <p className="">{resume?.dob}</p>
+                <p className="">{resume?.dob || loadingText}</p>
               </div>
             </div>
             <div className="flex gap-3 items-center text-sm font-bold">
               <GiDatabase className="text-xl" />
               <div className="flex flex-col gap-1">
                 <p className="capitalize text-gray-500">currentsalary</p>
-                <p className="">{resume?.Csalary}</p>
+                <p className="">{resume?.Csalary || loadingText}</p>
               </div>
             </div>
             <div className="flex gap-3 items-center text-sm font-bold">
               <IoIosRocket className="text-xl" />
               <div className="flex flex-col gap-1">
                 <p className="capitalize text-gray-500">expectsalary</p>
-                <p className="">{resume?.Esalary}</p>
+                <p className="">{resume?.Esalary || loadingText}</p>
               </div>
             </div>
             <div className="flex gap-3 items-center text-sm font-bold">
               <GrLanguage className="text-xl" />
               <div className="flex flex-col gap-1">
                 <p className="capitalize text-gray-500">languages</p>
-                <p className="">{resume?.language}</p>
+                <p className="">{resume?.language || loadingText}</p>
               </div>
             </div>
           </div>
@@ -113,7 +115,10 @@ function Resumedetails() {
           </span>
           <div className="p-2 mt-2">
             <div className="flex flex-col gap-5">
-            {resume?.educations?.map((data:any, i:any)=>(
+            {resume ? 
+            (
+              <>
+              {resume?.educations?.map((data:any, i:any)=>(
               <>
               <div className="flex items-start gap-2" key={i}>
                 <TbPointFilled className="text-xl" />
@@ -129,6 +134,14 @@ function Resumedetails() {
               </div>
               </>
             ))}
+              </>
+            ) :
+            (
+              <>
+              {loadingText}
+              </>
+            )
+            }
             </div>
           </div>
         </div>
@@ -143,7 +156,10 @@ function Resumedetails() {
           </span>
           <div className="p-2 mt-2">
             <div className="flex flex-col gap-5">
-            {resume?.experience?.map((data:any, i:any)=>(
+           {resume ?
+          (
+            <>
+             {resume?.experience?.map((data:any, i:any)=>(
               <>
               <div className="flex items-start gap-2" key={i}>
                 <TbPointFilled className="text-xl" />
@@ -159,6 +175,15 @@ function Resumedetails() {
               </div>
               </>
             ))}
+            </>
+          )
+          :
+          (
+            <>
+              {loadingText}
+              </>
+          ) 
+          }
             </div>
           </div>
         </div>
@@ -172,6 +197,9 @@ function Resumedetails() {
           </span>
           <div className="p-2 mt-2">
             <div className="flex flex-col gap-5">
+            {resume ? 
+          (
+            <>
             {resume?.skills?.map((data:any, i:any)=>(
               <>
                 <div className="flex items-start gap-2">
@@ -182,6 +210,15 @@ function Resumedetails() {
               </div>
               </>
             ))}
+            </>
+          )
+          :
+          (
+            <>
+            {loadingText}
+            </>
+          )  
+          }
               
             </div>
           </div>

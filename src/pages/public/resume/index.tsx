@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import Checkbox from "@mui/material/Checkbox";
 import { IoIosSearch } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
@@ -112,7 +113,7 @@ function Resume() {
               </div> */}
               {/*  */}
 
-              <div>
+              <div className="hidden lg:block">
                 <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
                   job type
                 </h4>
@@ -144,7 +145,7 @@ function Resume() {
                 </div>
               </div>
               {/*  */}
-              <div>
+              <div className="hidden lg:block">
                 <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
                   Experience Level
                 </h4>
@@ -229,8 +230,10 @@ function Resume() {
             )  :
             (
               <>
-              <p>No Resume Uploaded</p>
-              </>
+              <div className="w-full flex justify-center items-center">
+                <ScaleLoader color="#1ad9eb"/>
+              </div>
+            </>
             )
             }
           </div>

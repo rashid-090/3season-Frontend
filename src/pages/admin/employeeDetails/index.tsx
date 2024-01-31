@@ -17,8 +17,10 @@ function EmployeeDetail() {
   const {employeeData} = useEmployeeData();
 
   function createMarkup() {
-    return {__html: employeeData?.description};
+    return {__html: employeeData?.description || loadingText};
   }
+
+  let loadingText = "Loading..."
   return (
     <>
       <div className="shadow-md m-2 md:m-10 bg-white p-4 pb-10 md:p-10 lg:mx-40 rounded-2xl capitalize flex flex-col gap-5">
@@ -38,8 +40,8 @@ function EmployeeDetail() {
               alt="profile logo"
             />
             <div className="md:col-span-3 flex flex-col gap-2 justify-center">
-              <h2 className="font-bold text-5xl">{employeeData?.fullName}</h2>
-              <p className="text-xl font-light">{employeeData?.designation}</p>
+              <h2 className="font-bold text-5xl">{employeeData?.fullName || loadingText}</h2>
+              <p className="text-xl font-light">{employeeData?.designation || loadingText}</p>
               <span className="h-[.090rem] w-full bg-gray-300"></span>
             </div>
           </div>
@@ -47,15 +49,15 @@ function EmployeeDetail() {
             <div className="text-base flex flex-col gap-1 justify-center">
               <span className="flex gap-3 items-center">
                 <FaPhone className="text-xs" />
-                <a>{employeeData?.phoneNumber}</a>
+                <a>{employeeData?.phoneNumber || loadingText}</a>
               </span>
               <span className="flex gap-3 items-center">
                 <MdEmail className="text-xs" />
-                <a>{employeeData?.email}</a>
+                <a>{employeeData?.email || loadingText}</a>
               </span>
               <span className="flex gap-3 items-center">
                 <FaLocationDot className="text-xs" />
-                <p>{employeeData?.address}</p>
+                <p>{employeeData?.address || loadingText}</p>
               </span>
             </div>
             <div className="lg:col-span-3 flex flex-col gap-4">
@@ -66,6 +68,9 @@ function EmployeeDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 gap-x-16 lowercase">
             <div className="flex flex-col gap-4 capitalize">
               <h4 className="font-bold uppercase text-2xl">Education</h4>
+              {employeeData ?
+            (
+              <>
               {employeeData?.educations?.map((data:any,i:any)=>(
                  <div>
                  <p className="text-base font-bold tracking-wider">
@@ -77,10 +82,22 @@ function EmployeeDetail() {
                  </span>
                </div>
               ))}
+              </>
+            )
+            :
+            (
+              <>
+              {loadingText}
+              </>
+            )  
+            }
             
             </div>
             <div className="lg:col-span-3 flex flex-col gap-4 capitalize">
               <h4 className="font-bold uppercase text-2xl">WORK EXPERIENCE</h4>
+              {employeeData ?
+            (
+              <>
               {employeeData?.experience?.map((data:any,i:any)=>(
                 <div>
                   <span className="flex text-xs gap-2 font-medium">
@@ -93,21 +110,42 @@ function EmployeeDetail() {
                   <p className="text-xs">{data?.notes}</p>
               </div>
               ))}
+              </>
+            )
+            : 
+            (
+              <>
+              {loadingText}
+              </>
+            ) 
+            }
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 gap-x-16 lowercase">
             <div className="flex flex-col gap-4 capitalize">
               <h4 className="font-bold uppercase text-2xl">Language</h4>
               <div className="flex flex-col gap-2 text-sm font-medium tracking-widest">
-                <p>{employeeData?.language}</p>
+                <p>{employeeData?.language  || loadingText}</p>
               </div>
             </div>
             <div className="lg:col-span-3 flex flex-col gap-4">
               <h4 className="font-bold uppercase text-2xl">skill</h4>
               <div className="flex flex-col gap-2 text-sm font-medium capitalize">
-                {employeeData?.skills?.map((data:any,i:any)=>(
+               {employeeData ?
+               (
+                <>
+                 {employeeData?.skills?.map((data:any,i:any)=>(
                   <p key={i}>{data}</p>
                 ))}
+                </>
+               )
+                :
+                (
+                  <>
+                  {loadingText}
+                  </>
+                )
+                }
               </div>
             </div>
           </div>

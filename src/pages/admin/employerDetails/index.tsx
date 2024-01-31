@@ -5,6 +5,8 @@ import { BsBuildingsFill } from "react-icons/bs";
 import { FaUserTie } from "react-icons/fa";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import useEmployer from "./useEmployer";
+import { ProfileLogo } from "../../../assets";
+import { load } from "@fingerprintjs/fingerprintjs";
 
 let compLogo =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-rFz0nmN-YbFfvy4KgjQhlnLy7sTJydp1cQ&usqp=CAU";
@@ -13,8 +15,10 @@ function EmployerDetail() {
   const { employerData } = useEmployer();
 
   function createMarkup() {
-    return {__html: employerData?.description};
+    return {__html: employerData?.description || loadingText};
   }
+
+  let loadingText = "Loading..."
   return (
     <>
       <section className="min-h-screen w-full bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 overflow-hidden">
@@ -34,30 +38,30 @@ function EmployerDetail() {
             <div className="flex flex-col gap-1">
               <span className="flex items-center gap-2 text-2xl tracking-wide">
                 <BsBuildingsFill />
-                <h1 className="font-bold">{employerData?.companyName}</h1>
+                <h1 className="font-bold">{employerData?.companyName || loadingText}</h1>
               </span>
               <span className="flex gap-2 items-center text-base">
                 <FaUserTie />
-                <p>{employerData?.fullName}</p>
+                <p>{employerData?.fullName || loadingText}</p>
               </span>
               <p className="text-xs font-medium">
                
               </p>
               <a  className="text-xs font-normal lowercase">
-              {employerData?.webUrl}
+              {employerData?.webUrl || loadingText}
               </a>
               
             </div>
             <img
               className="h-28 w-28 object-cover"
-              src={employerData?.image}
+              src={employerData?.image || ProfileLogo}
               alt="logo"
               loading="lazy"
             />
           </div>
           <div className="mt-5 flex flex-col gap-3 text-base font-normal">
             <h3 className="text-2xl font-semibold">Address</h3>
-            <p className="text-sm">{employerData?.address}</p>
+            <p className="text-sm">{employerData?.address || loadingText}</p>
             <h3 className="text-2xl font-semibold">More Details</h3>
             <p className="text-sm" dangerouslySetInnerHTML={createMarkup()}></p>
             

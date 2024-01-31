@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ScaleLoader from "react-spinners/ScaleLoader";
 import Select from "react-select";
 import Checkbox from "@mui/material/Checkbox";
 import { IoIosSearch } from "react-icons/io";
@@ -38,11 +39,12 @@ function Jobs() {
     setSelectedOption(selectedOption);
   };
 
+
   return (
     <ThemeProvider theme={theme}>
       <section
-        className=" bg-search-bg bg-cover w-full h-full bg-bottom text-black py-10 lg:py-20"
-        style={{ height: "40%" }}
+        className=" bg-search-bg bg-cover w-full lg:h-[40%] bg-bottom text-black py-10 lg:py-20"
+        
       >
         <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100">
           <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 shadow-md">
@@ -133,7 +135,7 @@ function Jobs() {
               </div> */}
               {/*  */}
 
-              <div>
+              <div className="hidden lg:block">
                 <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
                   job type
                 </h4>
@@ -165,7 +167,7 @@ function Jobs() {
                 </div>
               </div>
               {/*  */}
-              <div>
+              <div className="hidden lg:block">
                 <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
                   Experience Level
                 </h4>
@@ -266,7 +268,9 @@ function Jobs() {
             ) :
             (
               <>
-              <p>No jobs posted yet</p>
+                <div className="w-full flex justify-center items-center">
+                  <ScaleLoader color="#1ad9eb"/>
+                </div>
               </>
             )
           }
