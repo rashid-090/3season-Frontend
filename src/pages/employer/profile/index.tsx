@@ -31,6 +31,7 @@ const Index = () => {
     // toast.s
     if (data?.data?.statusCode == 200) {
       toast?.success("success");
+      window.location.reload();
     } else {
       toast?.error("error");
     }

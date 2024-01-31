@@ -142,7 +142,7 @@ const Header: React.FC<HeaderProps> = () => {
                     <span>Profile</span><FaUserTie />
                   </li>
                   <div
-                    className={`bg-white border shadow-md absolute top-8 left-20 duration-200 transition-opacity origin-top ${
+                    className={`bg-white border shadow-md absolute top-8 left-4 duration-200 transition-opacity origin-top ${
                       drop ? "opacity-100" : "opacity-0"
                     }`}
                   >

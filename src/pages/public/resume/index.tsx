@@ -119,7 +119,7 @@ function Resume() {
                 </h4>
                 <div className="flex flex-col gap-1">
                   <span className="flex gap-2 items-center">
-                    <input type="checkbox"  checked />
+                    <input type="checkbox"  />
                     <label className="text-xs font-medium capitalize">
                       All
                     </label>
@@ -151,7 +151,7 @@ function Resume() {
                 </h4>
                 <div className="flex flex-col gap-1">
                   <span className="flex gap-2 items-center">
-                    <input type="checkbox"  checked />
+                    <input type="checkbox"   />
                     <label className="text-xs font-medium capitalize">
                       All
                     </label>
