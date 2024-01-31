@@ -24,21 +24,10 @@ import {
 import { compyLogo } from "../../../assets";
 
 const theme = createTheme();
-const options = [
-  { value: "Accounting", label: "Accounting" },
-  { value: "Banking", label: "Banking" },
-  { value: "Digital Marketing", label: "Digital Marketing" },
-];
 
 function Jobs() {
-  const { jobs, delayedSearch, searchParams, urlParamsHandler } = useJobs();
   const navigate = useNavigate();
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const handleChange = (selectedOption: any) => {
-    setSelectedOption(selectedOption);
-  };
-
+  const { jobs, delayedSearch, searchParams, urlParamsHandler } = useJobs();
 
   return (
     <ThemeProvider theme={theme}>
