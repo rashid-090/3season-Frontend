@@ -58,10 +58,10 @@ function Contactus() {
           <div className='md:col-span-3 p-5 lg:p-10 flex flex-col gap-5'>
             <h1 className='text-xl font-RedHatDisplayMedium'>Send Message</h1>
             <form onSubmit={handleSubmit} className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Your name' name='user_name' value={name} onChange={(e) => setName(e.target.value)}/>
-                <input className='px-3 py-2 border-2 border-gray-200 w-full' type="email" placeholder='Email address' name='user_email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <input className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' name='user_subject' value={subject} onChange={(e) => setSubject(e.target.value)}/>
-                <textarea rows={5} className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' name='message' value={message} onChange={(e) => setMessage(e.target.value)}/>
+                <input required className='px-3 py-2 border-2 border-gray-200 w-full' type="text" placeholder='Your name' name='user_name' value={name} onChange={(e) => setName(e.target.value)}/>
+                <input required className='px-3 py-2 border-2 border-gray-200 w-full' type="email" placeholder='Email address' name='user_email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input required className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' name='user_subject' value={subject} onChange={(e) => setSubject(e.target.value)}/>
+                <textarea  rows={5} className='px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' name='message' value={message} onChange={(e) => setMessage(e.target.value)}/>
                 <button className='bg-primaryclr hover:bg-sky-600 duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm' type='submit'>Send</button>
             </form>
           </div>
