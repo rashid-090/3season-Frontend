@@ -44,6 +44,7 @@ function Login() {
                     type="text"
                     placeholder="Email"
                     name="email"
+                    required
                     value={formik?.values?.email}
                     onChange={formik?.handleChange}
                   />
@@ -54,6 +55,7 @@ function Login() {
                   </label>
                   <div className="relative">
                     <input
+                    required
                       className="bg-gray-100 p-2 pr-12 w-full text-sm"
                       type={open === false ? "password" : "text"}
                       placeholder="Password"

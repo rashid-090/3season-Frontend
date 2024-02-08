@@ -70,6 +70,7 @@ function Register() {
                     onChange={handleChange}
                     name="name"
                     id="username"
+                    required
                   />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -78,12 +79,13 @@ function Register() {
                   </label>
                   <input
                     className="bg-gray-100 p-2 w-full text-sm"
-                    type="text"
+                    type="email"
                     placeholder="Email"
                     value={values?.email}
                     onChange={handleChange}
                     name="email"
                     id="email"
+                    required
                   />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -99,6 +101,7 @@ function Register() {
                       onChange={handleChange}
                       name="password"
                       id="password"
+                      required
                     />
                     <span className="absolute right-5 top-2 duration-200 transition-all">
                       {open === false ? (
@@ -128,6 +131,7 @@ function Register() {
                       onChange={handleChange}
                       name="confirmPassword"
                       id="confirmPassword"
+                      required
                     />
                     <span className="absolute right-5 top-2 duration-200 transition-all">
                       {open2 === false ? (

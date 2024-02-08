@@ -2,21 +2,30 @@ import { Link, useNavigate } from "react-router-dom";
 import Categories from "../../../components/user/catogories";
 import Jobsearch from "../../../components/user/jobSearch";
 import Companys from "../../../components/user/companys";
-import { callbackbg2 } from "../../../assets";
+import { callbackbg2,baaan,lp7 } from "../../../assets";
 import Footer from "../../../components/user/footer";
 
 function Home() {
   const navigate=useNavigate()
   return (
     <>
-      <div className="text-center pt-16 text-primaryclr bg-white">
-        <h1 className="text-3xl px-4 md:text-5xl lg:text-6xl font-RedHatDisplayExtraBold capitalize">
+
+    <div>
+      <img className=" w-full h-80 object-cover md:h-full" loading="eager" src={baaan} alt="banner" />
+    </div>
+  
+    <div className="bg-[#BABABA] text-center pt-16 text-slclr -mt-28 lg:-mt-40">
+        <h1 className="text-3xl px-4 md:text-5xl lg:text-6xl font-PoppinsBold capitalize">
           Fulfill your gap here...
         </h1>
-        <p className="text-lg font-RedHatDisplaySemibold pt-3">
+        <p className="text-lg font-PoppinsMedium lg:pt-3">
           1000+ opportunities to explore
         </p>
       </div>
+      <div className=" flex gap-5 py-5 lg:gap-10 justify-center w-full bg-[#BABABA]">
+      <button onClick={() => navigate("/auth/employee-registration")} className="bg-slclr text-white shadow-md shadow-gray-500 rounded-3xl hover:bg-slclrhr text-sm md:text-base px-5 md:px-10 py-2 md:py-3 ">Find your next job</button>
+      <button onClick={() => navigate("/auth/employer-registration")} className="bg-slclr text-white shadow-md shadow-gray-500 rounded-3xl hover:bg-slclrhr text-sm md:text-base px-5 md:px-10 py-2 md:py-3 ">Find your next hire</button>
+    </div>
       {/* Job search */}
       <Jobsearch />
 
@@ -26,7 +35,7 @@ function Home() {
       {/* Quotes */}
       <section style={{backgroundColor:"white"}}>
         <div className="flex flex-col-reverse lg:flex-row bg-white">
-          <div className="flex-1 flex justify-center flex-col gap-3 bg-primaryclr text-white p-5 lg:p-20 lg:py-28" >
+          <div className="basis-3/4 flex justify-center flex-col gap-3 bg-slclr text-white p-5 lg:p-20 lg:py-28" >
             <h1 className="group text-xl  lg:text-3xl font-extrabold">
               Beyond Resumes, Crafting Success
             </h1>
@@ -51,10 +60,10 @@ function Home() {
               </button>
             {/* </Link> */}
           </div>
-          <div className="flex-1 relative overflow-hidden">
+          <div className="basis-1/4 relative overflow-hidden">
             <img
               className="duration-500 hover:scale-105 object-cover object-right h-full md:h-52 lg:h-full w-full brightness-75"
-              src={callbackbg2}
+              src={lp7}
               alt="quotes"
             />
           </div>
