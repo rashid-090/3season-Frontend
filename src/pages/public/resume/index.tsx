@@ -54,11 +54,11 @@ function Resume() {
         className=" bg-search-bg bg-cover w-full h-full bg-top text-black py-10 lg:py-24"
         style={{ height: "40%" }}
       >
-        <div className="w-11/12 font-PoppinsRegular lg:w-9/12 mx-auto relative bg-slate-100">
-          <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 shadow-md">
+        <div className="w-11/12 font-PoppinsRegular lg:w-9/12 mx-auto relative bg-slate-100 shadow-md rounded-full">
+          <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 ">
             <div className="w-full relative md:col-span-2">
               <input
-                className="w-full p-[.35rem] caret-primaryclr pl-6 border-2 border-gray-200"
+                className="w-full placeholder:text-sm p-[.35rem] caret-primaryclr pl-6 border-2 border-gray-200"
                 type="search"
                 placeholder="Search Locations"
                 value={searchParams.get("search") || ""}
@@ -69,7 +69,7 @@ function Resume() {
               />
               <IoLocationOutline className="absolute top-3 left-1 text-gray-400" />
             </div>
-            <div className="w-full relative md:col-span-2">
+            <div className="w-full placeholder:text-sm relative md:col-span-2">
               <Select
                 className="w-full"
                 value={selectedOption}
@@ -94,7 +94,7 @@ function Resume() {
               {/*  */}
               <div className="relative w-full">
                 <input
-                  className="text-sm w-full py-2 p-1 border-2 pl-6 border-gray-200"
+                  className="text-sm rounded-3xl placeholder:text-sm w-full py-2 p-1 border-2 pl-6 border-gray-200"
                   type="search"
                   placeholder="Search Location"
                 />

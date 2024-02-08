@@ -27,7 +27,7 @@ const Jobsearch: React.FC<JobsearchProps> = () => {
           <form className="grid grid-cols-1 md:grid-cols-5 grid-flow-row md:grid-flow-col p-8 md:p-5 lg:p-10 gap-5 ">
             <div className="w-full relative md:col-span-2">
               <input
-                className="w-full p-[.33rem] caret-primaryclr pl-6 text-gray-700 rounded-3xl"
+                className="w-full placeholder:text-sm p-[.33rem] caret-primaryclr pl-6 text-gray-700 rounded-3xl"
                 type="search"
                 placeholder="Search keywords e.g. web design"
               />
@@ -38,7 +38,7 @@ const Jobsearch: React.FC<JobsearchProps> = () => {
             </div>
             <div className="w-full relative md:col-span-2">
               <input
-                className="w-full p-[.33rem] caret-primaryclr pl-6 rounded-3xl"
+                className="w-full placeholder:text-sm p-[.33rem] caret-primaryclr pl-6 rounded-3xl"
                 type="search"
                 placeholder="Search Locations"
               />

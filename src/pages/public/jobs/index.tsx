@@ -35,22 +35,22 @@ function Jobs() {
         className=" font-PoppinsRegular bg-search-bg bg-cover w-full lg:h-[40%] bg-bottom text-black py-10 lg:py-20"
         
       >
-        <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100">
-          <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 shadow-md">
+        <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100 rounded-full shadow-md">
+          <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 ">
             <div className="w-full relative md:col-span-2">
               <input
-                className="w-full p-[.33rem] caret-primaryclr pl-6 text-gray-700"
+                className="w-full placeholder:text-sm rounded-3xl p-[.33rem] caret-primaryclr pl-6 text-gray-700"
                 type="search"
-                placeholder="Search Keywords"
+                placeholder="Search keywords e.g. web design"
                 value={searchParams.get("search") || ""}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                   urlParamsHandler("search", e?.target?.value);
                   delayedSearch();
                 }}
               />
-              <label className="text-xs font-medium text-gray-400">
+              {/* <label className="text-xs font-medium text-gray-400">
                 Search keywords e.g. web design
-              </label>
+              </label> */}
               <IoIosSearch className="absolute top-3 left-1 text-gray-400" />
             </div>
             {/* <div className='w-full relative'>
@@ -59,7 +59,7 @@ function Jobs() {
                 </div> */}
             <div className="w-full relative md:col-span-2">
               <input
-                className="w-full p-[.33rem] caret-primaryclr pl-6"
+                className="w-full placeholder:text-sm rounded-3xl p-[.33rem] caret-primaryclr pl-6"
                 type="search"
                 placeholder="Search Locations"
                 value={searchParams.get("search2") || ""}
@@ -86,7 +86,7 @@ function Jobs() {
               {/*  */}
               <div className="relative w-full">
                 <input
-                  className="text-sm w-full py-2 p-1 border-2 pl-6 border-gray-200"
+                  className="rounded-3xl placeholder:text-sm text-sm w-full py-2 p-1 border-2 pl-6 border-gray-200"
                   type="search"
                   placeholder="Search Keywords"
                   value={searchParams.get("search3") || ""}
@@ -100,7 +100,7 @@ function Jobs() {
               {/*  */}
               <div className="relative w-full">
                 <input
-                  className="text-sm w-full py-2 p-1 border-2 pl-6 border-gray-200"
+                  className="rounded-3xl placeholder:text-sm text-sm w-full py-2 p-1 border-2 pl-6 border-gray-200"
                   type="search"
                   placeholder="Search Location"
                   value={searchParams.get("search1") || ""}
