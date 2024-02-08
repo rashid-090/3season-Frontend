@@ -62,7 +62,7 @@ function Home() {
           </div>
           <div className="basis-1/4 relative overflow-hidden">
             <img
-              className="duration-500 hover:scale-105 object-cover object-right h-full md:h-52 lg:h-full w-full brightness-75"
+              className="duration-500 hover:scale-105 object-cover md:object-right h-[25rem] object-top md:h-52 lg:h-full w-full brightness-75"
               src={lp7}
               alt="quotes"
             />

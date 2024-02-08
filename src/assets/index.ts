@@ -29,6 +29,12 @@ import Clnt7 from './images/clients/cl7.png';
 import Clnt8 from './images/clients/cl8.png';
 import Clnt9 from './images/clients/cl9.png';
 
+import Cd1 from './images/clients/d1.png';
+import Cd2 from './images/clients/d2.png';
+import Cd3 from './images/clients/d3.webp';
+import Cd4 from './images/clients/d6.png';
+import Cd5 from './images/clients/d5.png';
+
 import baaan from './latestpics/banner1212.webp'
 import lp1 from './latestpics/p1.webp'
 import lp2 from './latestpics/p2.webp'
@@ -39,6 +45,11 @@ import lp6 from './latestpics/p6.webp'
 import lp7 from './latestpics/beyond resume.webp'
 
 export{
+    Cd1,
+    Cd2,
+    Cd3,
+    Cd4,
+    Cd5,
     baaan,
     lp1,
     lp2,

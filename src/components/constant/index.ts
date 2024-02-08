@@ -1,61 +1,53 @@
-import {banpc1,banpc2,compyLogo,ProfileLogo,callbackbg2,Clnt1,Clnt2,Clnt3,Clnt4,Clnt5,Clnt6,Clnt7,Clnt8,Clnt9} from '../../assets/index';
+import {Cd1,Cd2,Cd3,Cd4,Cd5,banpc1,banpc2,compyLogo,ProfileLogo,callbackbg2,Clnt1,Clnt2,Clnt3,Clnt4,Clnt5,Clnt6,Clnt7,Clnt8,Clnt9} from '../../assets/index';
 
 
 export const CompanyLogos=[
     {
-        Logoimage:Clnt1
+        Logoimage:Cd1
     },
     {
-        Logoimage:Clnt2
+        Logoimage:Cd2
     },
     {
-        Logoimage:Clnt3
+        Logoimage:Cd3
     },
     {
-        Logoimage:Clnt4
+        Logoimage:Cd4
     },
     {
-        Logoimage:Clnt5
+        Logoimage:Cd5
     },
     {
-        Logoimage:Clnt6
+        Logoimage:Cd1
     },
     {
-        Logoimage:Clnt7
+        Logoimage:Cd2
     },
     {
-        Logoimage:Clnt8
+        Logoimage:Cd3
     },
     {
-        Logoimage:Clnt9
+        Logoimage:Cd4
     },
     {
-        Logoimage:Clnt1
+        Logoimage:Cd5
     },
     {
-        Logoimage:Clnt2
+        Logoimage:Cd1
     },
     {
-        Logoimage:Clnt3
+        Logoimage:Cd2
     },
     {
-        Logoimage:Clnt4
+        Logoimage:Cd3
     },
     {
-        Logoimage:Clnt5
+        Logoimage:Cd4
     },
     {
-        Logoimage:Clnt6
+        Logoimage:Cd5
     },
-    {
-        Logoimage:Clnt7
-    },
-    {
-        Logoimage:Clnt8
-    },
-    {
-        Logoimage:Clnt9
-    },
+    
    
 ]
 
