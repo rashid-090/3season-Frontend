@@ -18,6 +18,8 @@ module.exports = {
        'primaryclr': '#00ACEB',
        'secondaryclr': '#71CCF2',
        'thirdclr': '#B6E1F6',
+       'slclr': '#007D9B',
+       'slclrhr': '#026E8E',
 
      },
      fontSize:{
@@ -35,6 +37,11 @@ module.exports = {
        RedHatDisplaySemibold:['Red-Hat-Display-SemiBold', 'sans-serif'],
        RedHatDisplayBold:['Red-Hat-Display-Bold', 'sans-serif'],
        RedHatDisplayExtraBold:['Red-Hat-Display-Extrabold', 'sans-serif'],
+       PoppinsLight:['Poppins-light', 'sans-serif'],
+       PoppinsRegular:['Poppins-Regular', 'sans-serif'],
+       PoppinsMedium:['Poppins-Medium', 'sans-serif'],
+       PoppinsSemibold:['Poppins-Semibold', 'sans-serif'],
+       PoppinsBold:['Poppins-Bold', 'sans-serif'],
      },
      backgroundImage: {
       'banner-bg1': "url('./assets/images/home/3sea1.jpg')",

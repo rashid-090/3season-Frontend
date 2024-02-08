@@ -54,8 +54,8 @@ function Resume() {
         className=" bg-search-bg bg-cover w-full h-full bg-top text-black py-10 lg:py-24"
         style={{ height: "40%" }}
       >
-        <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100">
-          <form className="grid grid-cols-1 md:grid-cols-5 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 shadow-md">
+        <div className="w-11/12 font-PoppinsRegular lg:w-9/12 mx-auto relative bg-slate-100">
+          <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 shadow-md">
             <div className="w-full relative md:col-span-2">
               <input
                 className="w-full p-[.35rem] caret-primaryclr pl-6 border-2 border-gray-200"
@@ -86,7 +86,7 @@ function Resume() {
         </div>
       </section>
 
-      <section className="w-11/12 lg:w-9/12 mx-auto">
+      <section className="w-11/12 lg:w-9/12 mx-auto font-PoppinsRegular">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 py-5">
           {/* filters */}
           <div className="px-3 py-5 bg-[#f5f5f5] h-fit w-full text-gray-700">
@@ -217,7 +217,7 @@ function Resume() {
                     <div>
                       <button
                         onClick={() => navigate(`/resume-details/${data?._id}`)}
-                        className="lg:hover:translate-y-0.5 bg-primaryclr hover:bg-green-500 shadow-md text-xs font-bold uppercase duration-200 text-white px-7 rounded-sm py-2 whitespace-nowrap"
+                        className="lg:hover:translate-y-0.5 bg-slclr hover:bg-green-500 shadow-md text-xs font-bold uppercase duration-200 text-white px-7 rounded-sm py-2 whitespace-nowrap"
                       >
                         view
                       </button>

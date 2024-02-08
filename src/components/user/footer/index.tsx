@@ -18,11 +18,11 @@ function Footer() {
 
   return (
     <>
-      <footer className="bg-gradient-to-r from-[#193C56] to-[#191A1B] text-white">
+      <footer className="font-PoppinsRegular bg-gradient-to-r from-[#193C56] to-[#191A1B] text-white">
         <div className="w-11/12 xl:w-10/12 mx-auto flex flex-col md:flex-row justify-between py-10 gap-10 md:gap-5 lg:gap-20">
           <div className="flex-1 flex flex-col gap-5 md:gap-3">
             <NavLink to="/">
-              <img className="h-12 w-52 md:h-8 md:w-40 lg:w-64 lg:h-14" src={LogoWhite} alt="Threeseason" />
+              <img className="h-14 w-58 md:h-8 md:w-40 lg:w-64 lg:h-14" src={LogoWhite} alt="Threeseason" />
             </NavLink>
             <p className="text-sm lg:w-[50%]">
             Three Seasons Global Staffing Solutions LLC is a professional recruitment and workforce management staffing agency.
@@ -35,20 +35,20 @@ function Footer() {
             <div className="h-[2px] -mt-2 w-20 bg-white"></div>
             <div className="flex flex-col gap-2 font-light text-sm mb-4">
               <p>1309 Coffeen Avenue STE 1200, USA,<br/> Sheridan, Wyoming 82801</p>
-              <a href="mailto:careers@threeseasonsglobal.com" target="_blank" className="hover:text-primaryclr duration-200">Careers@threeseasonsglobal.com</a>
-              <a href="mailto:recruitments@threeseasonsglobal.com" target="_blank" className="hover:text-primaryclr duration-200">Recruitments@threeseasonsglobal.com</a>
+              <a href="mailto:careers@threeseasonsglobal.com" target="_blank" className="hover:text-slclr duration-200">Careers@threeseasonsglobal.com</a>
+              <a href="mailto:recruitments@threeseasonsglobal.com" target="_blank" className="hover:text-slclr duration-200">Recruitments@threeseasonsglobal.com</a>
             </div>
             <div className="flex gap-3 items-center">
-              <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
+              <div className="text-xl cursor-pointer border border-slclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-thirdclrr rounded-full">
                 <a href="https://www.linkedin.com/company/three-seasons-llc/" target="_blank" aria-label="Linkedin"><FaLinkedinIn className="" /></a>
               </div>
-              <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
+              <div className="text-xl cursor-pointer border border-slclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-thirdclrr rounded-full">
                 <a href="https://www.facebook.com/Threeseasonsjobsabroad" target="_blank" aria-label="Facebook"><FaFacebook className="" /></a>
               </div>
               {/* <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
                 <a href="#" target="_blank" aria-label="Twitter"><FaTwitter className="" /></a>
               </div> */}
-              <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
+              <div className="text-xl cursor-pointer border border-slclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-thirdclrr rounded-full">
                 <a href="https://api.whatsapp.com/send?phone=919846353801" target="_blank" aria-label="Whatsapp"><FaWhatsapp className="" /></a>
               </div>
             </div>

@@ -78,7 +78,7 @@ function Login() {
                   </div>
                 </div>
                 <button
-                  className="capitalize bg-primaryclr hover:bg-[#0d7ba3] duration-200 cursor-pointer w-full p-2 rounded-xl text-white font-semibold text-base"
+                  className="capitalize bg-slclr hover:bg-slclrhr duration-200 cursor-pointer w-full p-2 rounded-xl text-white font-semibold text-base"
                   type="submit"
                 >
                   log in
@@ -86,17 +86,26 @@ function Login() {
               </form>
             </div>
             {/* register button */}
-            <div className="flex justify-between items-center text-blue-950">
+            <div className=" text-blue-950">
               <p className="text-xs  lowercase font-medium">
                 If you don't have an account...
               </p>
-              <button
-                onClick={() => navigate("/auth/employee-registration")}
-                className="text-sm md:text-base hover:bg-primaryclr hover:text-white duration-200 font-semibold rounded-lg capitalize border border-primaryclr py-1 px-3 "
-              >
-                Register
-              </button>
+              <div className="flex gap-3 flex-col pt-2">
+                <button
+                  onClick={() => navigate("/auth/employee-registration")}
+                  className="text-sm hover:bg-slclr group hover:text-white duration-200 font-semibold rounded-lg  border border-slclr py-2 px-3 "
+                >
+                  Register as <span className="text-slclr underline group-hover:text-black">employee</span>
+                </button>
+                <button
+                  onClick={() => navigate("/auth/employer-registration")}
+                  className="text-sm hover:bg-slclr group hover:text-white duration-200 font-semibold rounded-lg  border border-slclr py-2 px-3 "
+                >
+                  Register as <span className="text-slclr underline group-hover:text-black">employer</span>
+                </button>
+              </div>
             </div>
+              
           </div>
           <div className="h-full hidden md:block w-full rounded-2xl relative overflow-hidden">
             <img

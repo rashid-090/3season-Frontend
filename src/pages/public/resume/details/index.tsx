@@ -41,7 +41,7 @@ function Resumedetails() {
 
   return (
     <>
-      <div className="w-11/12 lg:w-10/12 py-10 mx-auto flex flex-col gap-5">
+      <div className="font-PoppinsRegular w-11/12 lg:w-10/12 py-10 mx-auto flex flex-col gap-5">
         <div className="flex justify-between flex-col gap-y-5 text-center md:text-left md:flex-row items-center">
           <div className="flex flex-col md:flex-row gap-5 capitalize">
             <img

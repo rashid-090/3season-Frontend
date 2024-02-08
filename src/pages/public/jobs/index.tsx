@@ -32,7 +32,7 @@ function Jobs() {
   return (
     <ThemeProvider theme={theme}>
       <section
-        className=" bg-search-bg bg-cover w-full lg:h-[40%] bg-bottom text-black py-10 lg:py-20"
+        className=" font-PoppinsRegular bg-search-bg bg-cover w-full lg:h-[40%] bg-bottom text-black py-10 lg:py-20"
         
       >
         <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100">
@@ -78,11 +78,11 @@ function Jobs() {
       </section>
 
       {/* job list */}
-      <section className="w-11/12 lg:w-9/12 mx-auto">
+      <section className="font-PoppinsRegular w-11/12 lg:w-9/12 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 py-5">
           {/* filters */}
           <div className="px-3 py-5 bg-[#f5f5f5] h-fit w-full text-gray-700">
-            <form className="w-full flex flex-col gap-5">
+            <form className=" w-full flex flex-col gap-5">
               {/*  */}
               <div className="relative w-full">
                 <input
@@ -125,7 +125,7 @@ function Jobs() {
               {/*  */}
 
               <div className="hidden lg:block">
-                <h4 className="text-xs pb-2 uppercase font-semibold tracking-wide">
+                <h4 className="text-xs pb-2 uppercase font-PoppinsMedium tracking-wide">
                   job type
                 </h4>
                 <div className="flex flex-col gap-1">
@@ -207,7 +207,7 @@ function Jobs() {
               return (
                 <div
                   key={i}
-                  className="border shadow-md flex flex-col md:flex-row gap-2 w-full px-1 md:px-5"
+                  className="font-PoppinsRegular border shadow-md flex flex-col md:flex-row gap-2 w-full px-1 md:px-5"
                 >
                   <div className="w-full md:w-[20%]  p-3 flex items-center justify-center">
                     <img
@@ -244,7 +244,7 @@ function Jobs() {
                     <div>
                       <button
                         onClick={() => navigate(`/job-details/${data?._id}`)}
-                        className="lg:hover:translate-y-0.5 bg-primaryclr hover:bg-green-500 shadow-md text-xs font-bold uppercase duration-200 text-white px-7 rounded-sm py-2 whitespace-nowrap"
+                        className="lg:hover:translate-y-0.5 bg-slclr hover:bg-green-500 shadow-md text-xs font-bold uppercase duration-200 text-white px-7 rounded-sm py-2 whitespace-nowrap"
                       >
                         apply
                       </button>

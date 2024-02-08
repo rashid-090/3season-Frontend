@@ -44,7 +44,7 @@ function Companys() {
     <section className='py-10 bg-white'>
         <div className='relative'>
                 <div className='h-[.09rem] w-full bg-gray-200 z-[-1] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]'></div>
-                <h1 className='text-base md:text-xl font-RedHatDisplayBold tracking-widest text-center my-10 w-fit mx-auto bg-white px-5 capitalize'>Top Companies</h1>
+                <h1 className='text-base md:text-xl font-PoppinsSemibold tracking-widest text-center my-10 w-fit mx-auto bg-white px-5 capitalize'>Top Companies</h1>
         </div>
         <div className=''>
             <Slider {...settings} className=''>

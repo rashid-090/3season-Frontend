@@ -64,7 +64,7 @@ notify();
   return (
     <>
       <div>
-        <div className="w-11/12 lg:w-10/12 py-10 mx-auto flex flex-col gap-5">
+        <div className="font-PoppinsRegular w-11/12 lg:w-10/12 py-10 mx-auto flex flex-col gap-5">
         <button onClick={handleGoBack} className="flex items-center gap-2">
             <IoArrowBackCircleSharp className="text-5xl text-gray-300 hover:text-gray-400 duration-200" />
           </button>
@@ -98,7 +98,7 @@ notify();
               {/* Apply button */}
               <button
                 onClick={() => handleClick(id)}
-                className={`mt-5 border border-primaryclr py-2 px-5 w-fit flex items-center gap-2 text-black hover:bg-primaryclr hover:text-white duration-300 uppercase text-xs font-bold group`}
+                className={`mt-5 border border-slclr py-2 px-5 w-fit flex items-center gap-2 text-black hover:bg-slclr hover:text-white duration-300 uppercase text-xs font-bold group`}
               >
                 {loading ? "Loading..." : clicked ? "Applyed" : "Apply"}
                 <IoArrowForwardCircleOutline className="group-hover:translate-x-1 duration-300 text-lg" />

@@ -29,7 +29,24 @@ import Clnt7 from './images/clients/cl7.png';
 import Clnt8 from './images/clients/cl8.png';
 import Clnt9 from './images/clients/cl9.png';
 
+import baaan from './latestpics/banner1212.webp'
+import lp1 from './latestpics/p1.webp'
+import lp2 from './latestpics/p2.webp'
+import lp3 from './latestpics/p3.webp'
+import lp4 from './latestpics/p4.webp'
+import lp5 from './latestpics/p5.webp'
+import lp6 from './latestpics/p6.webp'
+import lp7 from './latestpics/beyond resume.webp'
+
 export{
+    baaan,
+    lp1,
+    lp2,
+    lp3,
+    lp4,
+    lp5,
+    lp6,
+    lp7,
     Logo,
     LogoEmp,
     LogoBlack,

@@ -145,7 +145,7 @@ function Register() {
                   </div>
                 </div>
                 <button
-                  className="capitalize bg-primaryclr hover:bg-[#0d7ba3] duration-200 cursor-pointer w-full p-2 rounded-xl text-white font-semibold text-base"
+                  className="capitalize bg-slclr hover:bg-slclrhr duration-200 cursor-pointer w-full p-2 rounded-xl text-white font-semibold text-base"
                   type="submit"
                 >
                   register
@@ -159,7 +159,7 @@ function Register() {
               </p>
               <button
                 onClick={() => navigate("/auth/login")}
-                className="text-sm md:text-base hover:bg-primaryclr hover:text-white duration-200 font-semibold rounded-lg capitalize border border-primaryclr py-1 px-3 "
+                className="text-sm md:text-base hover:bg-slclr hover:text-white duration-200 font-semibold rounded-lg capitalize border border-slclr py-1 px-3 "
               >
                 Login
               </button>

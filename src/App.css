@@ -36,6 +36,34 @@
 }
 
 
+
+@font-face{
+  src: url(assets/fonts/Poppins-Light.woff2) format(woff2);
+  font-family: "Poppins-light";
+  font-display: swap;
+}
+@font-face{
+  src: url(assets/fonts/Poppins-Regular.woff2) format(woff2);
+  font-family: "Poppins-Regular";
+  font-display: swap;
+}
+@font-face{
+  src: url(assets/fonts/Poppins-Medium.woff2) format(woff2);
+  font-family: "Poppins-Medium";
+  font-display: swap;
+}
+@font-face{
+  src: url(assets/fonts/Poppins-SemiBold.woff2) format(woff2);
+  font-family: "Poppins-Semibold";
+  font-display: swap;
+}
+@font-face{
+  src: url(assets/fonts/Poppins-Bold.woff2) format(woff2);
+  font-family: "Poppins-Bold";
+  font-display: swap;
+}
+
+
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
@@ -70,7 +98,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Red-Hat-Display-Regular', sans-serif;
+  font-family: "Poppins-Regular", sans-serif;
   overflow-x: hidden;
   color: #000;
   background-color: white !important;
@@ -97,7 +125,7 @@ input[type="file"]:focus{
   border: 2px solid transparent;
 }
 select:focus {
-  border-color: #00ACEB !important;
+  border-color: #007D9B !important;
 }
 textarea{
   outline: none;
@@ -105,10 +133,10 @@ textarea{
   border: 2px solid transparent;
 }
 input:focus{
-  border: 2px solid #00ACEB;
+  border: 2px solid #007D9B;
 }
 textarea:focus{
-  border: 2px solid #00ACEB;
+  border: 2px solid #007D9B;
 }
 
 li{
@@ -173,7 +201,7 @@ li{
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #00ACEB;
+  background-color: #007D9B;
   transition: width 0.25s ease-out;
 }
 .underline-hover-effect:hover::before {
@@ -192,7 +220,7 @@ li{
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #00ACEB;
+  background-color: #007D9B;
   transition: width 0.25s ease-out;
 }
 .underline-hover-effect2:hover::before {
