@@ -43,6 +43,8 @@ import lp4 from './latestpics/p4.webp'
 import lp5 from './latestpics/p5.webp'
 import lp6 from './latestpics/p6.webp'
 import lp7 from './latestpics/beyond resume.webp'
+import lp8 from './latestpics/builll.webp'
+import lp9 from './latestpics/aasdasd.webp'
 
 export{
     Cd1,
@@ -58,6 +60,8 @@ export{
     lp5,
     lp6,
     lp7,
+    lp8,
+    lp9,
     Logo,
     LogoEmp,
     LogoBlack,

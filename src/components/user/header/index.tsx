@@ -117,7 +117,7 @@ const Header: React.FC<HeaderProps> = () => {
           <div className="hidden lg:block">
             <ul className="flex gap-8 font-PoppinsRegular items-center">
               {menuItems?.map((menu: any, index: any) => (
-                <li className="capitalize underline-hover-effect2 hover:text-slclr" key={index}>
+                <li className="capitalize underline-hover-effect2 font-PoppinsSemibold text-slclr hover:text-black" key={index}>
                   <NavLink to={menu.url}>{menu.title}</NavLink>
                 </li>
               ))}
@@ -137,7 +137,7 @@ const Header: React.FC<HeaderProps> = () => {
                   <li></li>
                   <li
                     onClick={toggleOptions}
-                    className="cursor-pointer flex items-center gap-1 hover:text-slclr duration-150"
+                    className="cursor-pointer flex items-center gap-1 font-PoppinsSemibold text-slclr hover:text-black duration-150"
                   >
                     <span>Profile</span><FaUserTie />
                   </li>
@@ -149,13 +149,13 @@ const Header: React.FC<HeaderProps> = () => {
                     <ul className="flex flex-col gap-2 py-5 px-6">
                       <li
                         onClick={() => navigate("/auth/employer-registration")}
-                        className="cursor-pointer flex gap-2 items-center hover:text-slclr duration-150"
+                        className="cursor-pointer flex gap-2 items-center font-PoppinsSemibold text-slclr hover:text-black duration-150"
                       >
                         <span>Profile</span> <FaUser />
                       </li>
                       <li
                         onClick={() =>signout()}
-                        className="cursor-pointer flex gap-2 items-center hover:text-slclr duration-150"
+                        className="cursor-pointer flex gap-2 items-center font-PoppinsSemibold text-slclr hover:text-black duration-150"
                       >
                         <span>Logout</span> <FaSignOutAlt />
                       </li>
@@ -169,7 +169,7 @@ const Header: React.FC<HeaderProps> = () => {
                 >
                   <li
                     onClick={() => navigate("/auth/login")}
-                    className="cursor-pointer flex items-center gap-1 hover:text-slclr duration-150"
+                    className="cursor-pointer flex items-center gap-1 font-PoppinsSemibold text-slclr hover:text-black duration-150"
                   >
                     <span>Login</span> <IoLogInOutline />
                   </li>
@@ -237,7 +237,7 @@ const Header: React.FC<HeaderProps> = () => {
               {menuItems?.map((menu: any, index: any) => (
                 <li
                   onClick={() => setOpen(false)}
-                  className=" w-fit  px-7 py-3 hover:text-slclr"
+                  className=" w-fit  px-7 py-3 font-PoppinsSemibold text-slclr hover:text-black"
                   key={index}
                 >
                   <NavLink to={menu.url}>{menu.title}</NavLink>
@@ -252,13 +252,13 @@ const Header: React.FC<HeaderProps> = () => {
                   <div className="flex gap-5 items-center">
                         <li
                         onClick={() => navigate("/auth/employer-registration")}
-                        className="cursor-pointer hover:text-slclr"
+                        className="cursor-pointer font-PoppinsSemibold text-slclr hover:text-black"
                       >
                         Profile
                       </li>
                         <li
                         onClick={() =>signout()}
-                        className="cursor-pointer hover:text-slclr"
+                        className="cursor-pointer font-PoppinsSemibold text-slclr hover:text-black"
                       >
                         Logout
                       </li>
@@ -269,13 +269,13 @@ const Header: React.FC<HeaderProps> = () => {
                   <div className="flex gap-5 items-center">
                         <li
                        onClick={() => navigate("/auth/login")}
-                        className="cursor-pointer hover:text-slclr"
+                        className="cursor-pointer font-PoppinsSemibold text-slclr hover:text-black"
                       >
                         Login
                       </li>
                       <li
                     onClick={toggleOptions}
-                    className="cursor-pointer flex items-center gap-1 hover:text-slclr duration-150"
+                    className="cursor-pointer flex items-center gap-1 font-PoppinsSemibold text-slclr hover:text-black duration-150"
                   >
                     <span>Register</span> <IoKeyOutline />
                   </li>
@@ -287,13 +287,13 @@ const Header: React.FC<HeaderProps> = () => {
                     <ul className="flex flex-col gap-2 py-5 px-6">
                       <li
                         onClick={() => navigate("/auth/employer-registration")}
-                        className="cursor-pointer flex gap-2 items-center hover:text-slclr duration-150"
+                        className="cursor-pointer flex gap-2 items-center font-PoppinsSemibold text-slclr hover:text-black duration-150"
                       >
                         <span>Employer</span> <FaUser />
                       </li>
                       <li
                         onClick={() => navigate("/auth/employee-registration")}
-                        className="cursor-pointer flex gap-2 items-center hover:text-slclr duration-150"
+                        className="cursor-pointer flex gap-2 items-center font-PoppinsSemibold text-slclr hover:text-black duration-150"
                       >
                         <span>Employee</span> <FaUserTie />
                       </li>

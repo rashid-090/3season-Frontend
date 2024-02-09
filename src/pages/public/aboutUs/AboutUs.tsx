@@ -1,13 +1,13 @@
 import React from "react";
-import {Abtbg,LogoEmp,lp6} from '../../../assets'
+import {Abtbg,LogoEmp,lp6,lp7,lp8} from '../../../assets'
 import Footer from "../../../components/user/footer";
 
 function Aboutus() {
   return (
     <>
      <section className="group w-11/12 font-PoppinsRegular lg:w-10/12 mx-auto grid grid-cols-1 gap-10 lg:grid-cols-5 py-10 overflow-hidden">
-        <div className="lg:col-span-2 mx-auto overflow-hidden md:rounded-tr-[4rem] md:rounded-bl-[4rem] shadow-2xl">
-          <img loading="lazy" className="object-cover w-full hover:scale-105 duration-200 h-full md:h-96 lg:h-full " src={lp6} alt="banner" />
+        <div className="lg:col-span-2 mx-auto overflow-hidden rounded-[3rem] shadow-2xl border-[6px] border-slclr">
+          <img loading="lazy" className="object-cover w-full hover:scale-105 duration-200 h-full pointer-events-none" src={lp8} alt="banner" />
         </div>
         <div className="lg:col-span-3 flex flex-col justify-center">
 
