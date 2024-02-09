@@ -39,7 +39,7 @@ const Index = () => {
   };
   return (
     <>
-      <div className="lg:col-span-3">
+      <div className="lg:col-span-3 mt-12">
         <form className="" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-y-5 md:gap-y-3 md:flex-row md:items-center justify-between">
             <div className="flex flex-col gap2">

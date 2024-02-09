@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Loginpic from "../../../assets/images/3login.webp";
+import {Loginpic2} from "../../../assets";
 import LogoBlack from "../../../assets/ThreeSeasonBlackLogo.svg";
 import { PiEyeThin, PiEyeSlashThin } from "react-icons/pi";
 import useLogin from "./useLogin"
@@ -112,8 +112,8 @@ function Login() {
           <div className="h-full hidden md:block w-full rounded-2xl relative overflow-hidden">
             <img
               loading="lazy"
-              className="rounded-2xl object-cover h-full hover:scale-105 duration-200 hover:saturate-150"
-              src={Loginpic}
+              className="rounded-2xl object-cover object-bottom h-full hover:scale-105 duration-200 hover:saturate-150"
+              src={Loginpic2}
               alt="loginimage"
             />
           </div>

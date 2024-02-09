@@ -1,12 +1,25 @@
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import Categories from "../../../components/user/catogories";
 import Jobsearch from "../../../components/user/jobSearch";
 import Companys from "../../../components/user/companys";
-import { callbackbg2,baaan,lp7 } from "../../../assets";
+import { callbackbg2,baaan,lp7,lp2,lp4 } from "../../../assets";
 import Footer from "../../../components/user/footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function Home() {
-  const navigate=useNavigate()
+  const navigate=useNavigate();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Animation duration
+      easing: 'ease-in-out', // Animation easing function
+      once: true, // Only run once
+    });
+  }, []);
+
   return (
     <>
 
@@ -15,10 +28,10 @@ function Home() {
     </div>
   
     <div className="bg-[#BABABA] text-center pt-16 text-slclr -mt-28 lg:-mt-40">
-        <h1 className="text-3xl px-4 md:text-5xl lg:text-6xl font-PoppinsBold capitalize">
+        <h1  className="text-3xl px-4 md:text-5xl lg:text-6xl font-PoppinsBold capitalize">
           Fulfill your gap here...
         </h1>
-        <p className="text-lg font-PoppinsMedium lg:pt-3">
+        <p  className="text-lg font-PoppinsMedium lg:pt-3">
           1000+ opportunities to explore
         </p>
       </div>
@@ -36,13 +49,13 @@ function Home() {
       <section style={{backgroundColor:"white"}}>
         <div className="flex flex-col-reverse lg:flex-row bg-white">
           <div className="basis-3/4 flex justify-center flex-col gap-3 bg-slclr text-white p-5 lg:p-20 lg:py-28" >
-            <h1 className="group text-xl  lg:text-3xl font-extrabold">
+            <h1 data-aos="fade-in" className="group text-xl  lg:text-3xl font-extrabold">
               Beyond Resumes, Crafting Success
             </h1>
-            <h1 className="text-lg lg:text-2xl font-bold">
+            <h1 data-aos="fade-in" className="text-lg lg:text-2xl font-bold">
               Redefining workforce pathway to excellence
             </h1>
-            <p className="text-sm">
+            <p data-aos="fade-in" className="text-sm">
               Three Seasons Global Staffing Solutions LLC is a premier
               recruitment and workforce management agency dedicated to
               connecting top-tier talent with exceptional opportunities. With a
@@ -74,34 +87,32 @@ function Home() {
       <Companys />
 
       {/* Testimonials */}
-      {/* <Testimonials/> */}
+      {/* categpictures */}
+      <section className="overflow-hidden w-11/12 md:w-10/12 mx-auto py-10 md:py-16 flex flex-col gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-5">
+            <div className="w-full flex justify-center flex-col gap-3 md:gap-5 lg:p-20">
+              <h1 data-aos="fade-in" className="text-xl md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international nursing staffing solution</h1>
+              <p data-aos="fade-in" className="text-sm md:text-base">A renowned global healthcare provider with facilities in various countries faced challenges in recruiting and retaining highly skilled nursing professionals. The organization aimed to maintain high-quality patient care across diverse cultural and medical settings.</p>
+            </div>
+            <div data-aos="fade-up"  className="w-full border-4 rounded-[3rem] overflow-hidden border-slclr">
+              <img className="w-full h-[300px] md:h-[400px] object-cover" src={lp2} alt="image" />
+            </div>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-5">
+            <div data-aos="fade-up"  className="w-full border-4 rounded-[3rem] overflow-hidden border-slclr">
+              <img className="w-full h-[300px] md:h-[400px] object-cover" src={lp4} alt="image" />
+            </div>
+            <div className="w-full flex justify-center flex-col gap-3 md:gap-5 lg:p-20">
+              <h1 data-aos="fade-in"  className="text-xl md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international  hotel staffing solution</h1>
+              <p data-aos="fade-in"  className="text-sm md:text-base">A leading international hotel chain with locations across Europe, Asia, and North America faced challenges in recruiting and retaining top-tier staff for its luxury properties. The hotel group aimed to maintain consistent service excellence across diverse cultural settings.</p>
+            </div>
+        </div>
+       
+      </section>
+      {/* categpictures */}
 
-      {/* Blogs */}
 
-      {/* <section className='w-11/12 lg:w-9/12 mx-auto py-10 lg:pb-20'>
-          <div className='relative'>
-                  <div className='h-[.09rem] w-full bg-gray-200 z-[-1] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]'></div>
-                  <h1 className='text-base md:text-xl font-semibold tracking-widest text-center my-10 w-fit mx-auto bg-white px-5 uppercase'>Recent News</h1>
-          </div>
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-5 lg:gap-10'>
-             {
-                BlogData?.slice(0,3).map((data,index)=>{
-                  return(
-                  <div className='' key={index}>
-                      <div className='w-full relative overflow-hidden'><img className='object-cover hover:scale-105 duration-300' src={data.image} alt="blog" /></div>
-                      <div className='bg-gray-50 p-3 relative w-[90%] -m-5 mx-auto'>
-                        <p className='uppercase text-[10px] font-bold text-gray-400 tracking-wide'>{data.date}</p>
-                        <h4 className='py-1 text-lg font-bold text-gray-700 uppercase'>{data.title}</h4>
-                        <p className='md:text-xs text-sm font-medium text-gray-700'>{data.desc.slice(0,280)} ...</p>
-                        <Link><button className='text-xs duration-150 font-semibold capitalize text-secondaryclr hover:text-primaryclr mt-3 flex gap-1 items-center group'>Read More<MdKeyboardDoubleArrowRight className='text-black mt-[2px] group-hover:translate-x-1 duration-200'/></button></Link>
-                      </div>
-                  </div>
-                  )
-                })
-             }
-          </div>
-      </section> */}
+      
       <Footer/>
     </>
   );

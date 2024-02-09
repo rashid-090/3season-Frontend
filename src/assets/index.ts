@@ -11,6 +11,7 @@ import compyLogo from './images/logos/company-100.png';
 import JobsearchPic from './images/jobsearch.webp';
 import ResumebgPic from './images/resumebg.webp';
 import Loginpic from './images/3login.webp';
+import Loginpic2 from './latestpics/logg.webp';
 import Registerpic from './images/3register.webp';
 import AdminLogo from './images/adminLogo.svg';
 import Adminbg from './images/3adminbg.webp';
@@ -77,6 +78,7 @@ export{
     compyLogo,
     ResumebgPic,
     Loginpic,
+    Loginpic2,
     Registerpic,
     Adminbg,AdminLogo,
     Contactbg,

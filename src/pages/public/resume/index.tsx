@@ -186,7 +186,7 @@ function Resume() {
           </div>
           {/* jobs body */}
           <div className="p-3 flex flex-col gap-3 lg:col-span-3 bg-[#f5f5f5] h-fit w-full">
-              {resume ? 
+              {resume && resume.length > 0  ? 
             (
               <>
                {resume?.map((data: any, i: any) => {
@@ -230,9 +230,10 @@ function Resume() {
             )  :
             (
               <>
-              <div className="w-full flex justify-center items-center">
-                <ScaleLoader color="#1ad9eb"/>
-              </div>
+              <>
+                <p>No Datas Found...!</p>
+    
+              </>
             </>
             )
             }

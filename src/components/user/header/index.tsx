@@ -131,7 +131,6 @@ const Header: React.FC<HeaderProps> = () => {
 
                 <span
                   className="flex items-center gap-2 relative"
-                  ref={menuRef}
                 >
                   <li></li>
                   <li></li>

@@ -59,7 +59,7 @@ function EmployeeProfile() {
   };
   return (
     <>
-      <div className="lg:col-span-3">
+      <div className="lg:col-span-3 mt-12">
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-y-3 md:flex-row items-start md:items-center lg:items-start justify-between">
             <h1 className="text-base md:text-xl font-semibold uppercase tracking-widest">

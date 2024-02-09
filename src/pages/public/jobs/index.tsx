@@ -27,7 +27,8 @@ const theme = createTheme();
 
 function Jobs() {
   const navigate = useNavigate();
-  const { jobs, delayedSearch, searchParams, urlParamsHandler } = useJobs();
+ 
+  const { jobs,delayedSearch, searchParams, urlParamsHandler } = useJobs();
 
   return (
     <ThemeProvider theme={theme}>
@@ -198,8 +199,8 @@ function Jobs() {
           </div>
           {/* jobs body */}
           <div className="p-3 flex flex-col gap-3 lg:col-span-3 bg-[#f5f5f5] h-fit w-full">
-           
-            {jobs ? 
+
+            {jobs && jobs.length > 0 ? 
             (
               <>
               {jobs?.map((data: any, i: any) => {
@@ -257,12 +258,17 @@ function Jobs() {
             ) :
             (
               <>
-                <div className="w-full flex justify-center items-center">
-                  <ScaleLoader color="#1ad9eb"/>
-                </div>
+                <p>No Datas Found...!</p>
+      
+
               </>
+              
             )
           }
+
+
+       
+
           </div>
         </div>
       </section>
