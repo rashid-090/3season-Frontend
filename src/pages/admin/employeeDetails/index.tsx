@@ -20,7 +20,7 @@ function EmployeeDetail() {
     return {__html: employeeData?.description || loadingText};
   }
 
-  let loadingText = "Loading..."
+  let loadingText = "Not Available..."
   return (
     <>
       <div className="shadow-md m-2 md:m-10 bg-white p-4 pb-10 md:p-10 lg:mx-40 rounded-2xl capitalize flex flex-col gap-5">

@@ -23,9 +23,8 @@ function Aboutus() {
             <h1 data-aos="fade-in"  className="text-5xl lg:text-[7rem] font-PoppinsSemibold uppercase mb-5 leading-none tracking-wider">About us</h1>
 
           <div className="flex flex-col gap-2 text-sm md:text-base">
-            <p data-aos="fade-in">The way companies do business is undergoing fundamental change. By realizing that they earn profits from their core businesses and not from non-core competencies, the trend to outsource non-core competencies is on the rise. This movement toward outsourcing is enabling companies to spend more time, effort and money on the core business focus.</p>
-            <p data-aos="fade-in">THREE SEASONS Facility Management Company
-            (TSFM) is an integrated Facilities Management company offering an array of customized and flexible services to ensure the smooth running and functioning of your company without the hassle of you facing day-to-day complications.</p>
+            <p data-aos="fade-in">Three Seasons Global prides itself on delivering top-tier talent solutions tailored to meet the diverse needs of businesses worldwide. With a keen focus on excellence and client satisfaction, we strive to bridge the gap between exceptional talent and forward-thinking organizations across various industries. Our commitment to quality, integrity, and innovation fuels our relentless pursuit of providing cutting-edge staffing solutions that empower businesses to thrive in a competitive global market. Backed by a team of seasoned professionals and industry experts.</p>
+            <p data-aos="fade-in">Three Seasons Global leverages its extensive network and expertise to connect businesses with the best talent, ensuring seamless integration and long-term success. At Three Seasons Global, we are dedicated to exceeding expectations, fostering growth, and building lasting partnerships that drive mutual success.</p>
             <div className="w-full flex justify-start md:justify-end pt-5">
               <div className="h-1 md:h-2 w-20  bg-slclr"></div>
             </div>

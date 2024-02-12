@@ -12,6 +12,8 @@ interface Employee {
   experience: string;
 }
 
+let Demotitle = 'Not Available'
+
 const theme = createTheme();
 
 function EmployeeData() {
@@ -87,10 +89,10 @@ function EmployeeData() {
                       <TableCell>
                         <Checkbox checked={isItemSelected} />
                       </TableCell>
-                      <TableCell>{employee?.name}</TableCell>
-                      <TableCell>{employee?.phoneNumber}</TableCell>
-                      <TableCell>{employee?.country}</TableCell>
-                      <TableCell>{employee?.workExperince}</TableCell>
+                      <TableCell>{employee?.name || Demotitle}</TableCell>
+                      <TableCell>{employee?.phoneNumber || Demotitle}</TableCell>
+                      <TableCell>{employee?.country || Demotitle}</TableCell>
+                      <TableCell>{employee?.workExperince || Demotitle}</TableCell>
                       <TableCell>
                         <NavLink
                           to={`/superAdmin/employee-details/${employee?._id}`}

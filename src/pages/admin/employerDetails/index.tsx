@@ -18,7 +18,7 @@ function EmployerDetail() {
     return {__html: employerData?.description || loadingText};
   }
 
-  let loadingText = "Loading..."
+  let loadingText = "Not available"
   return (
     <>
       <section className="min-h-screen w-full bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 overflow-hidden">

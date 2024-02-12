@@ -19,6 +19,8 @@ import {
 import useEmployer from "./useEmployer";
 const theme = createTheme();
 
+let Demotitle = 'Not Available'
+
 function EmployerData() {
   const {
     loading,
@@ -96,9 +98,9 @@ function EmployerData() {
                       <TableCell>
                         <Checkbox checked={isItemSelected} />
                       </TableCell>
-                      <TableCell>{employee.fullName}</TableCell>
-                      <TableCell>{employee.companyName}</TableCell>
-                      <TableCell>{employee.email}</TableCell>
+                      <TableCell>{employee?.fullName || Demotitle}</TableCell>
+                      <TableCell>{employee?.companyName || Demotitle}</TableCell>
+                      <TableCell>{employee?.email || Demotitle}</TableCell>
                       <TableCell>
                         <NavLink
                           to={`/superAdmin/employer-details/${employee?._id}`}

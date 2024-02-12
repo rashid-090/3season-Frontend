@@ -54,7 +54,7 @@ function Contactus() {
         <div className='bg-gradient-to-t from-[#050c15c4] to-[#9e9e9e23] h-full absolute top-0 left-0 bottom-0 right-0'></div>
       </div>
 
-      <div className='relative  shadow-xl w-11/12 xl:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-5 bg-white  mb-20 -mt-20 lg:-mt-32 z-20 rounded-3xl overflow-hidden'>
+      <div className='relative  shadow-xl w-11/12 2xl:w-9/12 mx-auto grid grid-cols-1 md:grid-cols-5 bg-white  mb-20 -mt-20 lg:-mt-32 z-20 rounded-3xl overflow-hidden'>
           <div className='md:col-span-3 p-5 lg:p-10 flex flex-col gap-5'>
             <h1 className='text-xl font-PoppinsMedium'>Send Message</h1>
             <form onSubmit={handleSubmit} className='grid grid-cols-1 md:grid-cols-2 gap-5 font-PoppinsRegular'>
