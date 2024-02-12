@@ -23,7 +23,7 @@ const Jobsearch: React.FC<JobsearchProps> = () => {
   return (
     <>
       <section className="bg-[white] text-black pt-12 font-PoppinsRegular">
-        <div className="w-11/12 lg:w-9/12 mx-auto relative bg-zinc-200 rounded-full shadow-lg">
+        <div className="w-11/12 lg:w-9/12 mx-auto relative bg-zinc-200 rounded-xl lg:rounded-full shadow-lg">
           <form className="grid grid-cols-1 md:grid-cols-5 grid-flow-row md:grid-flow-col p-8 md:p-5 lg:p-10 gap-5 ">
             <div className="w-full relative md:col-span-2">
               <input
@@ -44,7 +44,7 @@ const Jobsearch: React.FC<JobsearchProps> = () => {
               />
               <IoLocationOutline className="absolute top-3 left-1 text-gray-400" />
             </div>
-            <button className="bg-slclr font-PoppinsMedium tracking-wider hover:bg-slclrhr duration-200 rounded-3xl uppercase text-white w-20% h-fit px-4 xl:px-8 p-[.4rem] shadow-md rounded-sm" onClick={()=>navigate("/jobs")}>
+            <button className="bg-slclr font-PoppinsMedium tracking-wider hover:bg-slclrhr duration-200 rounded-3xl uppercase text-white w-20% h-fit px-4 xl:px-8 p-[.4rem] shadow-md" onClick={()=>navigate("/jobs")}>
               Find Job
             </button>
           </form>

@@ -62,7 +62,7 @@ function Contactus() {
                 <input required className='rounded-3xl px-3 py-2 border-2 border-gray-200 w-full' type="email" placeholder='Email address' name='user_email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <input required className='rounded-3xl px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' type="text" placeholder='Subject' name='user_subject' value={subject} onChange={(e) => setSubject(e.target.value)}/>
                 <textarea  rows={5} className='rounded-2xl px-3 py-2 border-2 border-gray-200 w-full md:col-span-2' placeholder='Message..' name='message' value={message} onChange={(e) => setMessage(e.target.value)}/>
-                <button className='bg-slclr hover:bg-slclrhr rounded-3xl duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base rounded-sm' type='submit'>Send</button>
+                <button className='bg-slclr hover:bg-slclrhr rounded-3xl duration-200 py-2.5 md:col-span-2 text-white font-RedHatDisplaySemibold text-base' type='submit'>Send</button>
             </form>
           </div>
           <div className='md:col-span-2 bg-slclr p-5 lg:p-10 text-white'>

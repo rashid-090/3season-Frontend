@@ -36,7 +36,7 @@ function Jobs() {
         className=" font-PoppinsRegular bg-search-bg bg-cover w-full lg:h-[40%] bg-bottom text-black py-10 lg:py-20"
         
       >
-        <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100 rounded-full shadow-md">
+        <div className="w-11/12 lg:w-9/12 mx-auto relative bg-slate-100 rounded-xl lg:rounded-full shadow-md">
           <form className="grid grid-cols-1 md:grid-cols-4 grid-flow-row md:grid-flow-col p-10 md:p-5 lg:p-10 gap-5 ">
             <div className="w-full relative md:col-span-2">
               <input
