@@ -94,13 +94,13 @@ function Home() {
               <h1 data-aos="fade-in" className="text-xl md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international nursing staffing solution</h1>
               <p data-aos="fade-in" className="text-sm md:text-base">A renowned global healthcare provider with facilities in various countries faced challenges in recruiting and retaining highly skilled nursing professionals. The organization aimed to maintain high-quality patient care across diverse cultural and medical settings.</p>
             </div>
-            <div data-aos="fade-up"  className="w-full border-4 rounded-[3rem] overflow-hidden border-slclr">
-              <img className="w-full h-[300px] md:h-[400px] object-cover" src={lp2} alt="image" />
+            <div data-aos="fade-up"  className="w-full h-[300px] md:h-[400px] border-4 rounded-[3rem] overflow-hidden border-slclr">
+              <img className="w-full h-full object-cover" src={lp2} alt="image" />
             </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-5">
-            <div data-aos="fade-up"  className="w-full border-4 rounded-[3rem] overflow-hidden border-slclr">
-              <img className="w-full h-[300px] md:h-[400px] object-cover" src={lp4} alt="image" />
+            <div data-aos="fade-up"  className="w-full h-[300px] md:h-[400px] border-4 rounded-[3rem] overflow-hidden border-slclr">
+              <img className="w-full h-full object-cover" src={lp4} alt="image" />
             </div>
             <div className="w-full flex justify-center flex-col gap-3 md:gap-5 lg:p-20">
               <h1 data-aos="fade-in"  className="text-xl md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international  hotel staffing solution</h1>

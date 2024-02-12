@@ -18,7 +18,7 @@ function Footer() {
 
   return (
     <>
-      <footer className="font-PoppinsRegular bg-slclrhr text-white">
+      <footer className="font-PoppinsRegular bg-[#00A3C8] text-white">
         <div className="w-11/12 xl:w-10/12 mx-auto flex flex-col md:flex-row justify-between py-10 gap-10 md:gap-5 lg:gap-20">
           <div className="flex-1 flex flex-col gap-5 md:gap-3">
             <NavLink to="/">

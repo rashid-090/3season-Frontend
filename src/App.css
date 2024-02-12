@@ -201,7 +201,7 @@ li{
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #007D9B;
+  background-color: #00A3C8;
   transition: width 0.25s ease-out;
 }
 .underline-hover-effect:hover::before {
@@ -220,7 +220,7 @@ li{
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #007D9B;
+  background-color: #00A3C8;
   transition: width 0.25s ease-out;
 }
 .underline-hover-effect2:hover::before {

@@ -18,7 +18,7 @@ module.exports = {
        'primaryclr': '#00ACEB',
        'secondaryclr': '#71CCF2',
        'thirdclr': '#B6E1F6',
-       'slclr': '#007D9B',
+       'slclr': '#00A3C8',
        'slclrhr': '#026E8E',
 
      },
