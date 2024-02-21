@@ -434,3 +434,14 @@ li{
 }
 
 
+
+
+
+
+.companyslide .slick-list {
+  margin: 0 -15px !important;
+}
+
+.companyslide .slick-slide > div {
+  padding: 0 15px !important;
+}

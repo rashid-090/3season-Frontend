@@ -47,11 +47,11 @@ function Companys() {
                 <h1 className='text-base md:text-xl font-PoppinsSemibold  text-center mt-10 w-fit mx-auto bg-white px-5 capitalize'>Top Companies</h1>
         </div>
         <div className=''>
-            <Slider {...settings} className=''>
+            <Slider {...settings} className='companyslide'>
                 {CompanyLogos?.map((data:any,index:any)=>{
                     return(
                        <div className='mt-5' key={index}>
-                         <img className='h-full w-full object-cover' src={data.Logoimage} alt="company logo" />
+                         <img className='w-full h-24 object-contain aspect-video object-center' src={data.Logoimage} alt="company logo" />
                        </div>
                     )
                 })}

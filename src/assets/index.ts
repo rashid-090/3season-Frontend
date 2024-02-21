@@ -36,7 +36,17 @@ import Cd3 from './images/clients/d3.webp';
 import Cd4 from './images/clients/d6.png';
 import Cd5 from './images/clients/d5.png';
 
-import baaan from './latestpics/banner1212.webp'
+
+import client1 from './CLIENTLOGOS/Amber-Dale.webp';
+import client2 from './CLIENTLOGOS/Monsoon_empress.webp';
+import client3 from './CLIENTLOGOS/greenwood.webp';
+import client4 from './CLIENTLOGOS/holidayin.webp';
+import client5 from './CLIENTLOGOS/hyatt hotel.svg';
+import client6 from './CLIENTLOGOS/hyatt regency.svg';
+import client7 from './CLIENTLOGOS/sterling.webp';
+import client8 from './CLIENTLOGOS/taj.webp';
+
+import baaan from './latestpics/three webpage.webp'
 import lp1 from './latestpics/p1.webp'
 import lp2 from './latestpics/p2.webp'
 import lp3 from './latestpics/p3.webp'
@@ -92,4 +102,13 @@ export{
     Clnt7,
     Clnt8,
     Clnt9,
+    client1,
+    client2,
+    client3,
+    client4,
+    client5,
+    client6,
+    client7,
+    client8,
+
 }
