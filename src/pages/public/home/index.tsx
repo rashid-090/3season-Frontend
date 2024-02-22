@@ -89,22 +89,23 @@ function Home() {
       {/* Testimonials */}
       {/* categpictures */}
       <section className="overflow-hidden w-11/12 md:w-10/12 mx-auto py-10 md:py-16 flex flex-col gap-10 lg:gap-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-5">
-            <div className="w-full flex justify-center flex-col gap-3 md:gap-5 lg:p-20">
-              <h1 data-aos="fade-in" className="text-xl md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international nursing staffing solution</h1>
-              <p data-aos="fade-in" className="text-sm md:text-base">A renowned global healthcare provider with facilities in various countries faced challenges in recruiting and retaining highly skilled nursing professionals. The organization aimed to maintain high-quality patient care across diverse cultural and medical settings.</p>
-            </div>
-            <div data-aos="fade-up"  className="w-full h-[300px] md:h-[400px] border-4 rounded-[3rem] overflow-hidden border-slclr">
-              <img className="w-full h-full object-cover" src={lp2} alt="image" />
-            </div>
-        </div>
+       
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-5">
             <div data-aos="fade-up"  className="w-full h-[300px] md:h-[400px] border-4 rounded-[3rem] overflow-hidden border-slclr">
               <img className="w-full h-full object-cover" src={lp4} alt="image" />
             </div>
             <div className="w-full flex justify-center flex-col gap-3 md:gap-5 lg:p-20">
-              <h1 data-aos="fade-in"  className="text-xl md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international  hotel staffing solution</h1>
+              <h1 data-aos="fade-in"  className="text-xl capitalize md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international  hotel staffing solution</h1>
               <p data-aos="fade-in"  className="text-sm md:text-base">A leading international hotel chain with locations across Europe, Asia, and North America faced challenges in recruiting and retaining top-tier staff for its luxury properties. The hotel group aimed to maintain consistent service excellence across diverse cultural settings.</p>
+            </div>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-5">
+            <div className="w-full flex justify-center flex-col gap-3 md:gap-5 lg:p-20">
+              <h1 data-aos="fade-in" className="text-xl capitalize md:text-3xl lg:text-4xl font-PoppinsSemibold">Expert international nursing staffing solution</h1>
+              <p data-aos="fade-in" className="text-sm md:text-base">A renowned global healthcare provider with facilities in various countries faced challenges in recruiting and retaining highly skilled nursing professionals. The organization aimed to maintain high-quality patient care across diverse cultural and medical settings.</p>
+            </div>
+            <div data-aos="fade-up"  className="w-full h-[300px] md:h-[400px] border-4 rounded-[3rem] overflow-hidden border-slclr">
+              <img className="w-full h-full object-cover" src={lp2} alt="image" />
             </div>
         </div>
        

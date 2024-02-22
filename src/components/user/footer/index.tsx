@@ -18,7 +18,7 @@ function Footer() {
 
   return (
     <>
-      <footer className="font-PoppinsRegular bg-[#00A3C8] text-white">
+      <footer className="font-PoppinsRegular bg-slclr text-white">
         <div className="w-11/12 xl:w-10/12 mx-auto flex flex-col md:flex-row justify-between py-10 gap-10 md:gap-5 lg:gap-20">
           <div className="flex-1 flex flex-col gap-5 md:gap-3">
             <NavLink to="/">
@@ -39,16 +39,16 @@ function Footer() {
               <a href="mailto:recruitments@threeseasonsglobal.com" target="_blank" className="hover:text-black duration-200">Recruitments@threeseasonsglobal.com</a>
             </div>
             <div className="flex gap-3 items-center">
-              <div className="text-xl cursor-pointer border border-gray-300 p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-gray-500 rounded-full">
+              <div className="text-xl cursor-pointer border border-gray-300 p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-slclrhr rounded-full">
                 <a href="https://www.linkedin.com/company/three-seasons-llc/" target="_blank" aria-label="Linkedin"><FaLinkedinIn className="" /></a>
               </div>
-              <div className="text-xl cursor-pointer border border-gray-300 p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-gray-500 rounded-full">
+              <div className="text-xl cursor-pointer border border-gray-300 p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-slclrhr rounded-full">
                 <a href="https://www.facebook.com/Threeseasonsjobsabroad" target="_blank" aria-label="Facebook"><FaFacebook className="" /></a>
               </div>
               {/* <div className="text-xl cursor-pointer border border-primaryclr p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-primaryclr to-thirdclrr rounded-full">
                 <a href="#" target="_blank" aria-label="Twitter"><FaTwitter className="" /></a>
               </div> */}
-              <div className="text-xl cursor-pointer border border-gray-300 p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-gray-500 rounded-full">
+              <div className="text-xl cursor-pointer border border-gray-300 p-2 duration-500 transition-all ease-in-out hover:bg-gradient-to-r from-slclr to-slclrhr rounded-full">
                 <a href="https://api.whatsapp.com/send?phone=919846353801" target="_blank" aria-label="Whatsapp"><FaWhatsapp className="" /></a>
               </div>
             </div>

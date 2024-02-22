@@ -18,8 +18,8 @@ module.exports = {
        'primaryclr': '#00ACEB',
        'secondaryclr': '#71CCF2',
        'thirdclr': '#B6E1F6',
-       'slclr': '#00A3C8',
-       'slclrhr': '#026E8E',
+       'slclr': '#00a8e7',
+       'slclrhr': '#33bcef',
 
      },
      fontSize:{
