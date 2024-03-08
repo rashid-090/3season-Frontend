@@ -116,7 +116,7 @@ enum API {
   // employer APIs
   CREATE_JOB="/employer/job",
   LIST_JOB="/employer/job",
-  LIST_RESUME="/employer/user?role=Employee&search=",
+  LIST_RESUME="/employer/user?role=Employee&search=&filters=",
   GET_RESUME="/employer/user/:id",
 
   // SuperAdmin APIs

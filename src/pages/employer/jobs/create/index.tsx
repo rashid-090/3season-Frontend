@@ -106,11 +106,14 @@ function PostJobs() {
                   required
                   className="border-2 border-gray-200 px-3 py-2 font-normal text-sm"
                   type="text"
-                  placeholder="Enter Location"
+                  placeholder="Eg: Country, state, district, job-location"
                   name="location"
                   value={values?.location}
                   onChange={handleChange}
                 />
+                {touched?.location && errors?.location && (
+              <span className="info-error">{errors?.location}</span> 
+            )}
               </span>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

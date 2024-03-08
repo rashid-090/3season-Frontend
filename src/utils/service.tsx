@@ -14,6 +14,7 @@ const service = axios.create({
   // baseURL: "http://localhost:3002/api/1.0/",
   baseURL: "https://3season-backend-production.up.railway.app/api/1.0/",
   timeout: 60000,
+  
 });
 
 const setupInterceptors = (store: Store) => {

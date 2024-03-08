@@ -28,8 +28,8 @@ interface ValuesType {
   language: string;
   address: string;
   description: string;
-  workExperince:string,
-  image:any
+  workExperince: string;
+  image: any;
 }
 
 const LoginSchema = Yup.object().shape({
@@ -46,7 +46,7 @@ const LoginSchema = Yup.object().shape({
   Esalary: Yup.string().trim().required("Esalary is Required"),
   language: Yup.string().trim().required("language is Required"),
   address: Yup.string().trim().required("address is Required"),
-    description: Yup.string().trim().required("description is Required"),
+  description: Yup.string().trim().required("description is Required"),
 });
 
 const useRegistrationState = () => {
@@ -59,6 +59,7 @@ const useRegistrationState = () => {
   const [value, setValue] = useState("");
 
   const [selectedOption, setSelectedOption] = useState(null);
+  console.log(selectedOption);
 
   const handleChanges = (selectedOption: any) => {
     setSelectedOption(selectedOption);
@@ -121,7 +122,7 @@ const useRegistrationState = () => {
     }
     setFields(updatedFields);
   };
-  
+
   const {
     values,
     errors,
@@ -133,7 +134,7 @@ const useRegistrationState = () => {
     setFieldValue,
     setFieldTouched,
     setErrors,
-    setValues
+    setValues,
   } = useFormik({
     initialValues: {
       email: "",
@@ -150,8 +151,8 @@ const useRegistrationState = () => {
       language: "",
       address: "",
       description: "",
-      workExperince:"",
-      image:""
+      workExperince: "",
+      image: "",
     },
     // validationSchema: LoginSchema,
     onSubmit: debouncedSubmit,
@@ -168,13 +169,13 @@ const useRegistrationState = () => {
         experience: fields.experiences,
         educations: fields.educations,
         skills: fields.skills,
-        category: selectedOption,
+        category: selectedOption == null ? [] : selectedOption,
       };
       const { data } = await service.put(API.UPDATE_EMPLOYEE_PROFILE, obj);
       if (data?.statusCode === 200) {
         toast.success(data?.message || "Successful");
         // navigate(`${PUBLIC.PAGES.LANDING}`);
-        dispatch(getProfile())
+        dispatch(getProfile());
       } else {
         toast.error(data?.message);
         setErrors(data?.errors);
@@ -201,15 +202,14 @@ const useRegistrationState = () => {
       language: data?.data?.language,
       address: data?.data?.address,
       description: data?.data?.description,
-      workExperince:data?.data?.workExperince,
-      image:data?.data?.image
-      });
+      workExperince: data?.data?.workExperince,
+      image: data?.data?.image,
+    });
   };
 
   useEffect(() => {
     getUserProfile();
   }, []);
-
 
   return {
     values,
@@ -231,7 +231,7 @@ const useRegistrationState = () => {
     handleRemoveFields,
     handleFieldChange,
     setFieldTouched,
-    setFieldValue
+    setFieldValue,
   };
 };
 

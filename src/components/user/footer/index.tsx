@@ -34,7 +34,7 @@ function Footer() {
             <h1 className="text-lg">Contact us</h1>
             <div className="h-[2px] -mt-2 w-20 bg-white"></div>
             <div className="flex flex-col gap-2 font-light text-sm mb-4">
-              <p>1309 Coffeen Avenue STE 1200, USA,<br/> Sheridan, Wyoming 82801</p>
+              <p>1309 Coffeen Avenue STE 1200<br/> Sheridan, Wyoming 82801, USA</p>
               <a href="mailto:careers@threeseasonsglobal.com" target="_blank" className="hover:text-black duration-200">Careers@threeseasonsglobal.com</a>
               <a href="mailto:recruitments@threeseasonsglobal.com" target="_blank" className="hover:text-black duration-200">Recruitments@threeseasonsglobal.com</a>
             </div>

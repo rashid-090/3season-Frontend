@@ -15,8 +15,10 @@ import { toast } from "react-toastify";
 
 const catgoptions = [
   { value: "Accounting", label: "Accounting" },
-  { value: "Banking", label: "Banking" },
-  { value: "Digital Marketing", label: "Digital Marketing" },
+    { value: "Banking", label: "Banking" },
+    { value: "Digital Marketing", label: "Digital Marketing" },
+    { value: "IT", label: "IT" },
+    { value: "Others", label: "Others" },
 ];
 
 function EmployeeProfile() {
@@ -182,7 +184,7 @@ function EmployeeProfile() {
             </span>
 
             {/*  */}
-            {/* <span className="flex flex-col gap-1 w-full lg:col-span-2">
+            <span className="flex flex-col gap-1 w-full lg:col-span-2">
               <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
                 Categories
               </label>
@@ -195,7 +197,7 @@ function EmployeeProfile() {
                 isSearchable={true}
                 placeholder="Select Categories"
               />
-            </span> */}
+            </span>
 
             {/*  */}
             <span className="flex flex-col gap-1 w-full">
