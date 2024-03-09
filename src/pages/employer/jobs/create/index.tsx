@@ -100,20 +100,66 @@ function PostJobs() {
 
               <span className="flex flex-col gap-1 w-full  md:grid-cols-2">
                 <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
-                  Location
+                  Country
                 </label>
                 <input
                   required
                   className="border-2 border-gray-200 px-3 py-2 font-normal text-sm"
                   type="text"
-                  placeholder="Eg: Country, state, district, job-location"
-                  name="location"
-                  value={values?.location}
+                  placeholder="Enter Country"
+                  name="country"
+                  value={values?.country}
                   onChange={handleChange}
                 />
-                {touched?.location && errors?.location && (
-              <span className="info-error">{errors?.location}</span> 
-            )}
+                {/* {touched?.location && errors?.location && (
+                  <span className="info-error">{errors?.location}</span>
+                )} */}
+              </span>
+
+              <span className="flex flex-col gap-1 w-full  md:grid-cols-2">
+                <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
+                  State
+                </label>
+                <input
+                  required
+                  className="border-2 border-gray-200 px-3 py-2 font-normal text-sm"
+                  type="text"
+                  placeholder="Enter State"
+                  name="state"
+                  value={values?.state}
+                  onChange={handleChange}
+                />
+                
+              </span>
+              <span className="flex flex-col gap-1 w-full  md:grid-cols-2">
+                <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
+                  District
+                </label>
+                <input
+                  required
+                  className="border-2 border-gray-200 px-3 py-2 font-normal text-sm"
+                  type="text"
+                  placeholder="Enter District"
+                  name="district"
+                  value={values?.district}
+                  onChange={handleChange}
+                />
+               
+              </span>
+              <span className="flex flex-col gap-1 w-full  md:grid-cols-2">
+                <label className="text-sm text-gray-500 font-semibold capitalize tracking-widest">
+                  Job Loacation
+                </label>
+                <input
+                  required
+                  className="border-2 border-gray-200 px-3 py-2 font-normal text-sm"
+                  type="text"
+                  placeholder="Enter Location"
+                  name="place"
+                  value={values?.place}
+                  onChange={handleChange}
+                />
+               
               </span>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -127,8 +173,8 @@ function PostJobs() {
                     type="text"
                     placeholder="10k"
                     name="salaryOffer"
-                  value={values?.salaryOffer}
-                  onChange={handleChange}
+                    value={values?.salaryOffer}
+                    onChange={handleChange}
                   />
                 </span>
                 <span className="flex flex-col gap-1 w-full">
@@ -156,7 +202,7 @@ function PostJobs() {
                     required
                     className="border-2 border-gray-200 px-3 py-2 font-normal text-sm"
                     type="text"
-                    placeholder="Enter level"
+                    placeholder="Eg: Entry-level, Intermediate, Mid-level, Senior or executive-level."
                     name="experience"
                     value={values?.experience}
                     onChange={handleChange}

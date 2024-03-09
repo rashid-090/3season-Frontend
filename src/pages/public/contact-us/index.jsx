@@ -70,7 +70,7 @@ function Contactus() {
             <div className='flex flex-col h-full gap-5 py-5 md:py-10'>
               <span className='flex items-center gap-3'>
                 <SlLocationPin className='text-4xl'/>
-                <p className='text-xs xl:text-base  tracking-wider'>1309 Coffeen Avenue STE 1200, USA, Sheridan, Wyoming 82801</p>
+                <p className='text-xs xl:text-base  tracking-wider'>1309 Coffeen Avenue STE 1200 Sheridan, Wyoming 82801, USA</p>
               </span>
               <span className='flex flex-wrap items-center gap-3'>
                 <IoIosMail className='text-2xl'/>

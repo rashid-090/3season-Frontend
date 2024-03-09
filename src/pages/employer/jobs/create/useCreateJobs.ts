@@ -18,12 +18,15 @@ interface ValuesType {
   catogories: string;
   description: string;
   jobType: string;
-  location: string;
   salaryOffer: string;
   closeDate: string;
   experience: string;
   gender: string;
   qualification: string;
+  country: string;
+  state: string;
+  district: string;
+  place: string;
 }
 
 const LoginSchema = Yup.object().shape({
@@ -32,6 +35,7 @@ const LoginSchema = Yup.object().shape({
 });
 
 const useRegistrationState = () => {
+  const navigate = useNavigate()
   const dispatch = useAppDispatch();
   const debouncedSubmit = useDebouncedCallback(onSubmit, 300);
   const [value, setValue] = useState("");
@@ -53,7 +57,10 @@ const useRegistrationState = () => {
       catogories: "",
       description: "",
       jobType: "",
-      location: "",
+      country: "",
+      state: "",
+      district: "",
+      place: "",
       salaryOffer: "",
       closeDate: "",
       experience: "",
@@ -65,28 +72,30 @@ const useRegistrationState = () => {
   });
 
   async function onSubmit(
+    
     values: ValuesType,
     { setSubmitting }: FormikHelpers<ValuesType>
   ) {
     try {
-    //   console.log(values);
-        const obj = {
-          ...values,
-          description: value,
-          catogories:selectedcatgOption,
-          jobType:selectedJobTypeOption?.value,
-          gender:selectedGenderOption?.value,
-          qualification:selectedQualificationOption
-        };
-        const { data } = await service.post(API.CREATE_JOB, obj);
-        if (data?.statusCode === 200) {
-          toast.success(data?.message || "Successful");
-          // navigate(`${PUBLIC.PAGES.LANDING}`);
-          dispatch(getProfile());
-        } else {
-          toast.error(data?.message);
-          setErrors(data?.errors);
-        }
+      console.log(values);
+      const obj = {
+        ...values,
+        description: value,
+        catogories:selectedcatgOption,
+        jobType:selectedJobTypeOption?.value,
+        gender:selectedGenderOption?.value,
+        qualification:selectedQualificationOption,
+        location:`${values?.country},${values?.state},${values?.district},${values?.place}`
+      };
+      const { data } = await service.post(API.CREATE_JOB, obj);
+      if (data?.statusCode === 200) {
+        toast.success(data?.message || "Successful");
+        navigate(`/employer/jobs`);
+        dispatch(getProfile());
+      } else {
+        toast.error(data?.message);
+        setErrors(data?.errors);
+      }
     } catch (error: any) {
       toast.error(error);
     }

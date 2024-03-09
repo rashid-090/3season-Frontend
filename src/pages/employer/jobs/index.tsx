@@ -159,6 +159,7 @@ function ManageJobs() {
                   : filteredEmployees
                 )?.map((job:any) => {
                   return (
+                    
                     <TableRow key={job.id} hover>
                       <TableCell>{job.title}</TableCell>
                       {/* <TableCell>{job.company}</TableCell> */}
@@ -167,6 +168,7 @@ function ManageJobs() {
                     </TableRow>
                   );
                 })}
+                {filteredEmployees && filteredEmployees.length > 0 ? null : (<TableCell>Loading...</TableCell>)}
               </TableBody>
             </Table>
           </TableContainer>
